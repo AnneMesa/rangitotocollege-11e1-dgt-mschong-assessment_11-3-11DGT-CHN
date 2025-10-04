@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <title>My Webpage</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
@@ -52,49 +51,50 @@
     <h1 class ="intro">Here to cram for an exam?</h1>
     <h2 class="introsub">With this study resource, you will be able to learn more about the NCEA Level 1 Biology as. <br> will support the end of curriculum at the end of year.  </h2>
   </div>
-  <!--Div class for the entire flashcards/slides/quizzes introduction-->
-  <div class = "intros">
-    <!--Individual div section for flashcards, helps change background color and enhance individuality more-->
-    <div class ="flashcardsintro">
-      <img class ="introplace1" src="Images/grey.jpg" alt="introplace">
-      <h1 class="introheader">Recall key biology <br> terms now</h1>
-      <p class ="subheader">With our flashcards you'll be able to memorise the <br>necessary biology vocabulary for your school exams. </p>
+  <div class="grid-container">
+    <div class="learning">
+      <h1 class="lheading">Learn about biology now</h1>
+      <p class="lsheading">With our slides, you'll be able to learn more about the learning objectives that are needed for the exam. </p>
+      <button type="button" class="collapsible">Click here to go on slides</button>
+      <div class="content">
+        <a class ="topics" href="">Subtopic </a>
+        <a class ="topics" href="">Subtopic</a>
+        <a class ="topics" href="">Subtopic</a>
+      </div>
+    </div>
+    <div class="coverlearn">
+      <img class ="learnimg" src="Images/grey.jpg" alt ="learnimage">
+    </div>
+    <div class="coverflash">
+      <img class ="flashimg" src="Images/grey.jpg" alt ="flashimg">
+    </div>
+    <div class="flashcard">
+      <h1 class="fheading">Recall key biology terms now</h1>
+      <p class="fsheading">With our flashcards you'll be able to memorise the biology vocabulary for your school exams</p>
       <button type="button" class="collapsible">Click here to go on flashcards</button>
       <div class="content">
-        <a class ="topics" href="">Microbes </a>
-        <a class ="topics" href="">Beneficial Microbes</a>
-        <a class ="topics" href="">Harmful Microbes</a>
+        <a class ="topics" href="">Subtopic </a>
+        <a class ="topics" href="">Subtopic</a>
+        <a class ="topics" href="">Subtopic</a>
       </div>
     </div>
-    <!--Individual div section for slides, will have a green background colour to contrast from the other divs-->
-    <div class = "slidesintro">
-      <img class ="introplace2" src="Images/grey.jpg" alt="introplace">
-      <h1 class = "introheader2">Learn about biology now</h1>
-      <p class="subheader2">With our slides, you'll be able to learn more about the learning objectives that are needed for the exam. </p>
-      <button type="button" class="collapsible2">Click here to go on learning slides</button>
-      <div class="content2">
-        <a class ="topics2" href="">Microbes </a>
-        <a class ="topics2" href="">Beneficial Microbes</a>
-        <a class ="topics2" href="">Harmful Microbes</a>
-    </div>
-    </div>
-    <!--Individual div section for quizzes, has a white background colour to contrast from the slides section-->
-    <div class="quizzesintro">
-      <img class ="introplace3" src="Images/grey.jpg" alt="introplace">
-      <h1 class="introheader">Test your key knowledge today </h1>
-      <p class="subheader">With our quizzes, you'll be able to test the learning objectives that you have learnt across the curriculum.</p>
-      <button type="button" class="collapsible">Click here to go on learning quizzes</button>
+    <div class="quiz">
+      <h1 class="qheading">Test your knowledge today</h1>
+      <p class="qsheading">With our quizzes, you'll be able to test the learning objectives that you have learnt across the curriculum.</p>
+      <button type="button" class="collapsible">Click here to go on quizzes</button>
       <div class="content">
-        <a class ="topics" href="">Easy mode </a>
-        <a class ="topics" href="">Medium mode</a>
-        <a class ="topics" href="">Hard mode</a>
+        <a class ="topics" href="">Easy </a>
+        <a class ="topics" href="">Medium</a>
+        <a class ="topics" href="">Hard</a>
       </div>
     </div>
-
+    <div class="coverquiz">
+      <img class="quizimg" src="Images/grey.jpg" alt ="quizimage">
+    </div>
   </div>
 
 
-
+  
 
 
 

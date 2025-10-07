@@ -319,11 +319,11 @@ body{
 }
 
 .headersub{
-    font-size: 30px;
+    font-size: 2em;
     text-align: center;
     color: #627455;
     font-weight: 60px;
-    padding-top: 10px;
+    padding-top: 1em;
     font-family: "Lexend Deca", sans-serif;
 }
 *{box-sizing:border-box}
@@ -333,6 +333,23 @@ body{
     position: relative;
     margin: auto;
 
+}
+.learningintro{
+    background-color: #8bad8b;
+    padding: 5em;
+}
+.learningintro h1{
+    color: white;
+    text-align: center;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 4em;
+}
+.learningsub{
+    font-size: 1.1em;
+    font-family: "Lexend Deca", sans-serif;
+    text-align: center; 
+    color: #627455;
+    margin-top: 1em;
 }
 .mySlides{
     display: none;
@@ -350,13 +367,15 @@ body{
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+
+    background-color: #8bad8b;
 }
 .next{
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 .prev:hover, .next:hover{
-    background-color: rgba(0,0,0,0.8)
+    background-color: #627455
 }
 .captiontext{
     color: #627455;
@@ -383,9 +402,76 @@ body{
 .active, .dot:hover{
     background-color: #e6f0dc;
 }
-.active2, .dot:hover{
-    background-color: white;
+
+
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s
 }
+@keyframes fade{
+    from{opacity: .4}
+    to {opacity: 1}
+}
+
+.mySlides{
+    display: none;
+}
+.prev2, .next2{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight:bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+
+    background-color: #8bad8b;
+}
+.square1{
+    width: 750px;
+    height: 450px;
+}
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+    background-color: #627455
+}
+.captiontext{
+    color: #627455;
+    font-size: 18px;
+    padding: 10px 14px; 
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    text-align: left;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+    background-color: #e6f0dc;
+}
+
+
+
 .fade{
     animation-name: fade;
     animation-duration: 1.5s

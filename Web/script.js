@@ -28,8 +28,43 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
+var image_tracker1 = 'microorganism';
+function changefirst(){
+    var image = document.getElementById('square1');
+    if (image_tracker1 =='microorganism'){
+        image.src="Images/card1.jpg";
+        image_tracker1="microdefinition";
+    }
+    else{
+        image.src="Images/flash1.jpg.jpg";
+        image_tracker1="microorganism";
+    }
+}
 
-
+var image_tracker2 = 'yellow';
+function changesecond(){
+    var image = document.getElementById('square2');
+    if (image_tracker2 =='yellow'){
+        image.src="Images/pink.jpg";
+        image_tracker2="pink";
+    }
+    else{
+        image.src="Images/yellow.jpg";
+        image_tracker2="yellow";
+    }
+}
+var image_tracker3 = 'green';
+function changethird(){
+    var image = document.getElementById('square3');
+    if (image_tracker3 =='green'){
+        image.src="Images/purple.jpg";
+        image_tracker3 ="purple.jpg";
+    }
+    else{
+        image.src="Images/green.jpg";
+        image_tracker3 ="green";
+    }
+}
 let slideIndex = 1;
 showSlides(slideIndex);
 

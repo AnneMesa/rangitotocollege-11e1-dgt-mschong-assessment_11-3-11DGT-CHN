@@ -32,37 +32,85 @@ var image_tracker1 = 'microorganism';
 function changefirst(){
     var image = document.getElementById('square1');
     if (image_tracker1 =='microorganism'){
-        image.src="Images/card1.jpg";
-        image_tracker1="microdefinition";
+        image.src="Images/definition1.jpg";
+        image_tracker1="microorganismdefinition";
     }
     else{
-        image.src="Images/flash1.jpg.jpg";
+        image.src="Images/term1.jpg";
         image_tracker1="microorganism";
     }
 }
 
-var image_tracker2 = 'yellow';
+var image_tracker2 = 'binaryfission';
 function changesecond(){
     var image = document.getElementById('square2');
-    if (image_tracker2 =='yellow'){
-        image.src="Images/pink.jpg";
-        image_tracker2="pink";
+    if (image_tracker2 =='binaryfission'){
+        image.src="Images/definition2.jpg";
+        image_tracker2="binaryfissiondefinition";
     }
     else{
-        image.src="Images/yellow.jpg";
-        image_tracker2="yellow";
+        image.src="Images/term2.jpg";
+        image_tracker2="binaryfission";
     }
 }
-var image_tracker3 = 'green';
+var image_tracker3 = 'extracellulardigestion';
 function changethird(){
     var image = document.getElementById('square3');
-    if (image_tracker3 =='green'){
-        image.src="Images/purple.jpg";
-        image_tracker3 ="purple.jpg";
+    if (image_tracker3 =='extracellulardigestion'){
+        image.src="Images/definition3.jpg";
+        image_tracker3 ="extracellulardigestiondefinition";
     }
     else{
-        image.src="Images/green.jpg";
-        image_tracker3 ="green";
+        image.src="Images/term3.jpg";
+        image_tracker3 ="extracellulardigestion";
+    }
+}
+var image_tracker4 = 'passivediffusion';
+function changefourth(){
+    var image = document.getElementById('square4');
+    if (image_tracker4 =='passivediffusion'){
+        image.src="Images/definition4.jpg";
+        image_tracker4 ="passivediffusiondefinition";
+    }
+    else{
+        image.src="Images/term4.jpg";
+        image_tracker4 ="passivediffusion";
+    }
+}
+var image_tracker5 = 'sporeproduction';
+function changefifth(){
+    var image = document.getElementById('square5');
+    if (image_tracker5 =='sporeproduction'){
+        image.src="Images/definition5.jpg";
+        image_tracker5 ="sporeproductiondefinition";
+    }
+    else{
+        image.src="Images/term5.jpg";
+        image_tracker5 ="sporeproduction";
+    }
+}
+var image_tracker6 = 'budding';
+function changesixth(){
+    var image = document.getElementById('square6');
+    if (image_tracker6 =='budding'){
+        image.src="Images/definition6.jpg";
+        image_tracker6 ="buddingdefinition";
+    }
+    else{
+        image.src="Images/term6.jpg";
+        image_tracker6 ="budding";
+    }
+}
+var image_tracker7 = 'viralreplication';
+function changeseventh(){
+    var image = document.getElementById('square7');
+    if (image_tracker7 =='viralreplication'){
+        image.src="Images/definition7.jpg";
+        image_tracker7 ="viralreplicationdefinition";
+    }
+    else{
+        image.src="Images/term7.jpg";
+        image_tracker7 ="viralreplication";
     }
 }
 let slideIndex = 1;

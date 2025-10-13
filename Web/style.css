@@ -1,145 +1,125 @@
 
-body{
+body{/*Initial css style across all pages*/
     margin: 0px;
 }
-.navbar{
+/*Navigation bar css across all pages of my website*/
+.navbar{/*The div that wraps the entire navigation bar*/
     overflow: hidden; 
     background-color: #ffffff;
 }
-
-
 .navbar a{
-    margin-top:8px;
+    margin-top:8px;/*Controls the positioning of the text inside the navbar*/
     margin-left:8px;
     float: left;
     font-size: 1em;
     color: #627455;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    padding: 14px 16px;/*Controls the spacing of the text inside the navbar*/
+    text-decoration: none;/*Removes the underline for each link*/
     font-weight: 600; 
     font-family:"Lexend Deca", sans-serif;
 }
 
-.current{
-    border-bottom: 4px solid #8bad8b;
+.current{/*Div that indicates which page the user is on via underline*/
+    border-bottom: 4px solid #8bad8b;/*Underlined border at the bottom of the text*/
     border-radius: 4px;
     left:5px;
 }
 
-.current:hover{
-    color:#8bad8b;
-}
+.current:hover{color:#8bad8b;}/*Hovers over the underlined text*/
+
 .learningdropdown {
-    float:left;
-    overflow: hidden;
+    float:left;/*Ensures the navbar is spread across the entire page*/
+    overflow: hidden;/*Controls the content so it stays in a designated area rather than overlow*/
 }
 .learningdropdown a{
     float:left;
-    font-weight: normal; 
+    font-weight: normal; /*Resets the font weight to normal text*/
 }
 .learningdropdown .dropbtn{
-    position: relative;
+    position: relative;/*This position gives the ability to adjust the button's position*/
     font-size: 1em;
-    border: none;
+    border: none;/*This removes the automatic border around the button*/
     outline: none;
     color: #627455;
     padding: 14px 16px;
     background-color: inherit;
     font-family:"Lexend Deca", sans-serif;
-    font-weight: 600; 
+    font-weight: 600;
     overflow:hidden;
     margin-top: 8px;
 }
 
 .learningcontent{
-    display: none;
-    position: absolute;
+    display: none;/*This ensures the dropdown remains hidden until the button is clicked upon*/
+    position: absolute;/*Absolute makes the dropdown content stay in the same position*/
     background-color: #ffffff;
-    min-width: 160px;
+    min-width: 160px;/*Min-width controls the sizing of the dropdown content and ensures it won't get smaller than 160px*/
     padding: 10px;
-    border-radius: 0 0 25px 25px;
+    border-radius: 0 0 25px 25px;/*Gives the learning content dropdown a curved border*/
 }
 .learningcontent a{
     float: none;
-    color: #627455;
     padding: 12px 16px;
-    text-decoration: none;
+    text-decoration: none;/*Removes the underline for each link in the dropdown*/
     display: block;
     text-align: left; 
-    overflow: hidden;
-    position: relative;
 }
 
 .learningcontent a:hover{
     background-color: #e6f0dc;
-    border-radius: 25px;
+    border-radius: 25px;/*Gives the hover effect a curved border*/
 }
 
-.learningdropdown:hover .learningcontent{
-    display: block;
-}
+.learningdropdown:hover .learningcontent{display: block;}
 
-.dropbtn:hover{
-    color: #8bad8b;
-}
+.dropbtn:hover{color: #8bad8b;}
 
-.introduction{
+.logo{/*The logo image in the navbar*/
+    width: 50px;
+    height: 30px;
+    overflow:hidden;
+}
+/*End of navigation bar css*/
+/*Beginning of index.html homepage*/
+.introduction{/*The light green banner at the beginning of my homepage*/
     background-color: #e6f0dc;
-    margin:0px;
 }
 
-.intro{
+.intro{/*The large introductory header in the light green introduction banner*/
     font-family: "Lexend Deca", sans-serif;
     text-align: center;
     color: #627455;
     font-size:3em;
-    margin: 0px;
     padding-top: 110px;
     font-weight:400px;
 }
 
-.introsub{
+.introsub{/*The short introductory paragraph text in the light green introduction banner*/
     font-family: "Lexend Deca", sans-serif;
     text-align: center;
-    font-weight: normal; 
     font-size: 1.2em;
     color: #627455;
     padding-top:5px;
     padding-bottom:70px;
 }
-.logo{
-    width: 50px;
-    height: 30px;
-    margin:0px;
-    padding:0px;
-    overflow:hidden;
-}
-*{
-    margin: 0;
-    box-sizing: border-box;
-}
-.grid-container{
-    display: grid;
-    grid-template-areas:
-    'first first first firstimg firstimg firstimg'
+.grid-container{/*This is the grid layout that positions the flashcard, slideshow, and quiz introduction*/
+    display: grid;/*Automatically creates rows and columns*/
+    grid-template-areas:/*The automatic amount of columns is 6, so these areas are defined accoridingly to how much columns one grid area will take*/
+    'first first first firstimg firstimg firstimg'/*L*/
     'secondimg secondimg secondimg second second second'
     'third third third thirdimg thirdimg thirdimg';
     padding: 10px;
 }
-.grid-container > div{
-    padding: 10px;
-}
+.grid-container > div{padding: 10px;}
+
 .learning{
     grid-area: first; 
     color: #627455;
     font-family: "Lexend Deca", sans-serif;
     margin-left: 4.5em;
 }
-.coverlearn{
-    grid-area: firstimg;
+.coverlearn{grid-area: firstimg;}
 
-}
 .lheading, .qheading{
     margin-top: 1.5em;
     font-size: 2.7em;
@@ -188,10 +168,7 @@ body{
     font-family: "Lexend Deca", sans-serif;
     margin-left: 4.5em;
 }
-.coverquiz{
-    grid-area: thirdimg;
-
-}
+.coverquiz{grid-area: thirdimg;}
 .coverquiz img{
     max-width: 100%;
     height: auto;
@@ -307,8 +284,6 @@ body{
     color: #627455;
 }
 
-
-
 .subcards{
     font-family: "Lexend Deca", sans-serif;
     color: #627455;
@@ -327,6 +302,61 @@ body{
     font-family: "Lexend Deca", sans-serif;
 }
 *{box-sizing:border-box}
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cardgrid-container{
+    margin-top: 2em;
+    display: grid;
+    grid-template-areas:
+    'listterms listterms listterms slideshow-container slideshow-container slideshow-container';
+    padding: 0.5em;
+    gap: 1em;
+}
+.cardgrid-container > div{
+    padding: 10px;
+}
+.listterms h1{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2em;
+    color: #627455;
+}
+.listterms h2{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1em;
+    color: #627455;
+    font-weight: normal;
+}
+table{
+    border-collapse: separate;
+    width: 120%;
+    border: 1px solid #627455; 
+    border-radius: 20px;
+    overflow:hidden; 
+
+}
+th, td{padding: 0.8em;}
+th{
+    font-family: "Lexend Deca", sans-serif;
+    color: #627455;
+    font-size: 1.1em;
+    font-weight: normal; 
+    text-align: left; 
+}
+.tablewrap{margin-left: 6em;}
+
+.slideshow-container{grid-area: slideshow-container;}
+
+.listterms{grid-area: listterms;}
+
+.slideshow-container img{
+    margin-top: -1em;
+    margin-left: -2em;
+}
 
 .slideshow-container{
     max-width: 1000px;
@@ -351,9 +381,7 @@ body{
     color: #627455;
     margin-top: 1em;
 }
-.mySlides{
-    display: none;
-}
+.mySlides{display: none;}
 .prev, .next{
     cursor: pointer;
     position: absolute;
@@ -365,18 +393,37 @@ body{
     font-weight:bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
-
     background-color: #8bad8b;
 }
+.prev2, .next2{
+    cursor: pointer;
+    position: static;
+    border-radius: 50%;
+    color: white;
+    font-weight:bold;
+    padding: 0.8em;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: #8bad8b;
+}
+.next2{
+    right: 275px;
+    position: absolute; 
+    border-radius: 50%;
+}
+.prev2{
+    position: absolute; 
+    left: 280px;
+}
+.prev2:hover, .next2:hover{background-color: #627455;}
+
 .next{
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-.prev:hover, .next:hover{
-    background-color: #627455
-}
+.prev:hover, .next:hover{background-color: #627455;}
 .captiontext{
     color: #627455;
     font-size: 18px;
@@ -385,6 +432,17 @@ body{
     bottom: 12px;
     width: 100%;
     text-align: left;
+    font-family: "Lexend Deca", sans-serif;
+}
+.captiontext2{
+    color: #627455;
+    font-size: 20px;
+    padding: 10px 14px; 
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 10px;
+    top:390px;
     font-family: "Lexend Deca", sans-serif;
 }
 
@@ -399,11 +457,7 @@ body{
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover{
-    background-color: #e6f0dc;
-}
-
-
+.active, .dot:hover{background-color: #e6f0dc;}
 
 .fade{
     animation-name: fade;
@@ -414,29 +468,8 @@ body{
     to {opacity: 1}
 }
 
-.mySlides{
-    display: none;
-}
-.prev2, .next2{
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight:bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+.mySlides{display: none;}
 
-    background-color: #8bad8b;
-}
-.square1{
-    width: 750px;
-    height: 450px;
-}
 .next{
     right: 0;
     border-radius: 3px 0 0 3px;
@@ -466,11 +499,7 @@ body{
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover{
-    background-color: #e6f0dc;
-}
-
-
+.active, .dot:hover{background-color: #e6f0dc;}
 
 .fade{
     animation-name: fade;
@@ -483,6 +512,11 @@ body{
 .content-area{
     padding: 10% 0;
 }
+@media only screen and (max-width: 800px){
+    .cardgrid-container{
+        gap: 2em;
+    }
+}
 @media only screen and (max-width: 700px){
     .grid-container{
         grid-template-areas:
@@ -492,15 +526,25 @@ body{
         'secondimg'
         'third'
         'thirdimg';
-    }
-    .learning, .flashcard, .quiz{
-        margin: 0; 
-    }
+    }  
+
+    .learning, .flashcard, .quiz{margin: 0;}
+}
+@media only screen and (max-width: 800px){
+    .cardgrid-container{
+    grid-template-areas:
+        'listterms'
+        'slideshow-container';
+    } 
+    .tablewrap{overflow-x: auto;}
+
+    .tablewrap{margin-left: 0;}
+
+    .slideshow-container img{margin-left: 0;}
 }
 @media only screen and (max-width: 1000px){
-    .learning, .flashcard, .quiz{
-        margin: 0; 
-    }
+    .learning, .flashcard, .quiz{margin: 0;}
+
     .active, .active2, .collapsible, .collapsible2{
         position: static;
         width: 45%;
@@ -509,5 +553,4 @@ body{
         width: 45%;
         margin-top: 5em;
     }
-    
 }

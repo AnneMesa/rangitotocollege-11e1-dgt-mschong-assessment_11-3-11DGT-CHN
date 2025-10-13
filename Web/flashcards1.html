@@ -48,28 +48,68 @@
       </div>
     </div>
   </div>
-  <div class ="slideshow-container">
-    <div class="mySlides fade">
-      <img class="square1" src="Images/flash1.jpg.jpg" alt = "square1" id="square1" onclick="changefirst();">
-      <div class = "captiontext">1 / 3</div>
-    </div>
-    <div class="mySlides fade">
-      <img class="square2" src="Images/yellow.jpg" alt = "square2" id="square2" onclick="changesecond();">
-      <div class = "captiontext">2 / 3</div>
-    </div>
-    <div class="mySlides fade">
-      <img class="square3" src="Images/green.jpg" alt = "square3" id="square3" onclick="changethird();">
-      <div class = "captiontext">3 / 3</div>
-    </div>
-    <a class = "prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class = "next" onclick="plusSlides(1)">&#10095;</a>
+  <div class ="learningintro">
+    <h1 class="learningheading">
+        MICROBES
+    </h1>
+    <p></p>
   </div>
-  <br>
-  <div style ="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
-
+<!--I created a grid for my flashcards and my list of terms so that they're able to be centered automatically-->
+  <div class="cardgrid-container">
+    <div class="tablewrap">
+      <!--This tablewrap controls the positioning of the table within the grid, it also is involved in making the table responsive with media queries when the screen size changes-->
+      <div class="listterms">
+      <!--Short header for the flashcards-->
+      <h2> Biology/ NCEA / Level 1</h2><!--This is the subtitle that introduces the subject of the flashcards-->
+      <h1> MICROBES </h1><!--This is the topic of the flashcards-->
+      <!--End of the short header for the flashcards-->
+      <br>
+      <table><!--Table on the left that displays the list of terms-->
+        <tr><th>Microorganism</th></tr>
+        <tr><th>Binary Fission</th></tr>
+        <tr><th>Extracellular Digestion</th></tr>
+        <tr><th>Passive Diffusion</th></tr>
+        <tr><th>Spore Production</th></tr>
+        <tr><th>Budding</th></tr>
+        <tr><th>Viral Replication</th></tr>
+      </table><!--End of the table that displays the list of terms on the flashcards-->
+      </div>
+    </div>
+    <!--The container for the slideshow -->
+    <div class ="slideshow-container">
+      <div class="mySlides fade"><!--The onclick calls on the specific function of "changefirst" to change the 
+        displayed image into another image changing the link when a specific if/else statement is met-->
+        <img src="Images/term1.jpg" alt = "square1" id="square1" onclick="changefirst();">
+        <div class = "captiontext2">1 / 7</div><!--This text at the bottom conveys to the user which flashcard slide they're on-->
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/term2.jpg" alt = "square2" id="square2" onclick="changesecond();">
+        <div class = "captiontext2">2 / 7</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/term3.jpg" alt = "square3" id="square3" onclick="changethird();">
+        <div class = "captiontext2">3 / 7</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/term4.jpg" alt = "square4" id="square4" onclick="changefourth();">
+        <div class = "captiontext2">4 / 7</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/term5.jpg" alt = "square5" id="square5" onclick="changefifth();">
+        <div class = "captiontext2">5 / 7</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/term6.jpg" alt = "square6" id="square6" onclick="changesixth();">
+        <div class = "captiontext2">6 / 7</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/term7.jpg" alt = "square7" id="square7" onclick="changeseventh();">
+        <div class = "captiontext2">7 / 7</div>
+      </div>
+      <a class = "prev2" onclick="plusSlides(-1)">&#10094;</a>
+      <a class = "next2" onclick="plusSlides(1)">&#10095;</a>
+    </div><!--End of container for slideshow-->
+  </div><!--End of cardgrid-container-->
+ 
 </body>
 </html>

@@ -138,8 +138,4 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
 }
 
-$('.box .content').click(function(){
-    $(this).closest('.box').toggleClass('animate');
-    $(this).css('transform, rotateY(180deg)');
 
-});

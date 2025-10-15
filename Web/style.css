@@ -375,26 +375,43 @@ th{
     font-size: 4em;
 }
 .learningsub{
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-family: "Lexend Deca", sans-serif;
     text-align: center; 
     color: #627455;
     margin-top: 1em;
 }
+
 .mySlides{display: none;}
 .prev, .next{
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
+    position: relative;
+    max-width: 100%;
+    padding: 0.8em;
+    color:#627455;
     font-weight:bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    user-select: none;
-    background-color: #8bad8b;
+    font-size: min(2vw, 20px);
+}
+.prev{
+    bottom: 2.9em;
+    left:15%;
+    
+}
+.next{
+    bottom: 2.9em;
+    left: 20%;
+}
+
+.mySlides{margin-top:3em;}
+
+.mySlides img{
+    position: relative; 
+    top: 5px;
+    left:15px;
+    max-width:100%;
+    height:auto;
+    display: block; 
+    margin: auto;
 }
 .prev2, .next2{
     cursor: pointer;
@@ -419,19 +436,14 @@ th{
 }
 .prev2:hover, .next2:hover{background-color: #627455;}
 
-.next{
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-.prev:hover, .next:hover{background-color: #627455;}
 .captiontext{
     color: #627455;
-    font-size: 18px;
-    padding: 10px 14px; 
-    position: absolute;
-    bottom: 12px;
-    width: 100%;
+    font-size: 20px;
+    position: relative;
+    max-width: 100%;
+    bottom: 1.6em;
     text-align: left;
+    margin-left:9.5em;
     font-family: "Lexend Deca", sans-serif;
 }
 .captiontext2{
@@ -441,7 +453,7 @@ th{
     position: absolute;
     width: 100%;
     text-align: center;
-    left: 10px;
+    left: 3px;
     top:390px;
     font-family: "Lexend Deca", sans-serif;
 }
@@ -469,24 +481,6 @@ th{
 }
 
 .mySlides{display: none;}
-
-.next{
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-.prev:hover, .next:hover{
-    background-color: #627455
-}
-.captiontext{
-    color: #627455;
-    font-size: 18px;
-    padding: 10px 14px; 
-    position: absolute;
-    bottom: 12px;
-    width: 100%;
-    text-align: left;
-    font-family: "Lexend Deca", sans-serif;
-}
 
 .dot{
     cursor: pointer;
@@ -516,6 +510,9 @@ th{
     .cardgrid-container{
         gap: 2em;
     }
+    .slideshow-container img{
+        left:0;
+    }
 }
 @media only screen and (max-width: 700px){
     .grid-container{
@@ -540,7 +537,6 @@ th{
 
     .tablewrap{margin-left: 0;}
 
-    .slideshow-container img{margin-left: 0;}
 }
 @media only screen and (max-width: 1000px){
     .learning, .flashcard, .quiz{margin: 0;}

@@ -32,9 +32,9 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class = "learningcontent">
-        <a href="">Microbes</a>
-        <a href="">Beneficial Microbes</a>
-        <a href="">Harmful Microbes</a>
+        <a href="flashcards1.html">Microbes</a>
+        <a href="flashcards2.html">Beneficial Microbes</a>
+        <a href="flashcards3.html">Harmful Microbes</a>
       </div>
     </div>
     <div class= "learningdropdown">
@@ -42,47 +42,58 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class = "learningcontent">
-        <a href="">Easy</a>
-        <a href="">Medium</a>
-        <a href="">Hard</a>
+        <a href="quiz1.html">Easy</a>
+        <a href="quiz2.html">Medium</a>
+        <a href="quiz3.html">Hard</a>
       </div>
     </div>
   </div>
+  <!--Div for the banner of the learning slideshow page-->
   <div class ="learningintro">
     <h1 class="learningheading">
-        BENEIFCIAL MICROBES
+        MICROBES
     </h1>
   </div>
-  <h2 class ="headersub">
-    Introduction to Microbes
+  <!--End of the div-->
+  <h2 class ="headersub">  <!--Small introduction that introduces what the slideshow is going to be about, a.k.a what the page will be teaching you-->
+    Introduction to Beneficial Microbes
   </h2>
   <p class ="learningsub">
-    In Microbes, we will teach you an understanding of the learning objectives that are needed to complete your NCEA Level 1 exam. TThis <br>will include the structure of microorganisms, how to culture them, their life processes, and the environmental factors that affect their<br>growth. This is just filler text like lorem ipsum because I cannot bother writing anything at the moment/currently.
-  </p>
-  <div class ="slideshow-container">
-    <div class="mySlides fade">
-        <div class="numbertext"> 1 / 3</div>
-        <img src ="Images/grey.jpg" style = "width: 100%">
-        <div class = "captiontext">Caption Text</div>
+    Here, you're able to learn the basics of microorganisms and their structure. The main microorganisms that we're going to be <br>focusing on are bacteria, fungi, and viruses. You will be able to learn how they carry out the seven life processes, which you can <br>utilise in your biology exam.
+  </p>  <!--End of small introduction-->
+
+
+  <div class ="slideshow-container"><!--The container div that wraps around the entire slideshow-->
+    <div class="mySlides fade"><!--This controls the fade of each slide when the arrow is clicked-->
+        <img src ="Images/l2title.png" alt="l2title">
+        <div class = "captiontext">0 / 5 </div><!--The number is 0 as this is the title page-->
     </div>
     <div class="mySlides fade">
-        <div class="numbertext"> 2 / 3</div>
-        <img src ="Images/grey.jpg" style = "width: 100%">
-        <div class = "captiontext">Caption Two</div>
+        <img src ="Images/l2slide1.png" alt="l2slide1">
+        <div class = "captiontext">1 / 5</div><!--Numbers will change as the user goes through each slide-->
     </div>
     <div class="mySlides fade">
-        <div class="numbertext"> 3 / 3</div>
-        <img src ="Images/grey.jpg" style = "width: 100%">
-        <div class = "captiontext">Caption THree</div>
+        <img src ="Images/l2slide2.png" alt="l2slide2" >
+        <div class = "captiontext">2 / 5</div>
     </div>
-    <a class = "prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class = "next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
+    <div class="mySlides fade">
+        <img src ="Images/l2slide3.png" alt="l2slide3">
+        <div class = "captiontext">3 / 5</div>
+    </div>
+     <div class="mySlides fade">
+        <img src ="Images/l2slide4.png" alt="l2slide4">
+        <div class = "captiontext">4 / 5</div>
+    </div>
+    <div class="mySlides fade">
+        <img src ="Images/l2slide5.png" alt="l2slide5">
+        <div class = "captiontext">5 / 5</div>
+    </div>
+    <div class="arrows">
+      <a class = "prev" onclick="plusSlides(-1)">&#10094;</a><!--This is the arrow that allows the user to go backwards to the last slide there is, coded via js onclick -->
+      <a class = "next" onclick="plusSlides(1)">&#10095;</a><!--This is the arrow that allows the user to go forwards onto the next slide, coded via js onclick-->
+    </div>
+  </div><!--This is the end of the slideshow container that wraps around the entire slideshow-->
   <br>
-  <div style ="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
 </body>
 </html>
+

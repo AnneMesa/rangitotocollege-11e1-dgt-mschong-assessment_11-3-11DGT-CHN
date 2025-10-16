@@ -294,7 +294,7 @@ body{/*Initial css style across all pages*/
 }
 
 .headersub{
-    font-size: 2em;
+    font-size: 2.2em;
     text-align: center;
     color: #627455;
     font-weight: 60px;
@@ -308,7 +308,9 @@ body{/*Initial css style across all pages*/
     margin: 0;
     box-sizing: border-box;
 }
-
+.flashcard-container{
+    margin-top:-3em;
+}
 .cardgrid-container{
     margin-top: 2em;
     display: grid;
@@ -354,7 +356,7 @@ th{
 .listterms{grid-area: listterms;}
 
 .slideshow-container img{
-    margin-top: -1em;
+    margin-top: -1.5em;
     margin-left: -2em;
 }
 
@@ -372,23 +374,24 @@ th{
     color: white;
     text-align: center;
     font-family: "Lexend Deca", sans-serif;
-    font-size: 4em;
+    font-size: 5em;
 }
 .learningsub{
-    font-size: 1.2em;
+    font-size: 1.15em;
     font-family: "Lexend Deca", sans-serif;
     text-align: center; 
     color: #627455;
     margin-top: 1em;
 }
 
-.mySlides{display: none;}
+.mySlides, .mySlides2{display: none;}
 .prev, .next{
     cursor: pointer;
     position: relative;
     max-width: 100%;
     padding: 0.8em;
     color:#627455;
+    user-select: none; 
     font-weight:bold;
     font-size: min(2vw, 20px);
 }
@@ -402,9 +405,11 @@ th{
     left: 20%;
 }
 
-.mySlides{margin-top:3em;}
 
-.mySlides img{
+.mySlides, .mySlides2{
+    margin-top:3em;
+}
+.mySlides img, .mySlides2 img{
     position: relative; 
     top: 5px;
     left:15px;
@@ -415,30 +420,31 @@ th{
 }
 .prev2, .next2{
     cursor: pointer;
-    position: static;
-    border-radius: 50%;
-    color: white;
+    position: relative;
+    max-width: 100%;
+    padding:0.8em 1.1em 0.8em;
+    color:white;
+    user-select: none; 
     font-weight:bold;
-    padding: 0.8em;
-    font-size: 18px;
-    transition: 0.6s ease;
+    font-size: min(2vw, 20px);
+    border-radius: 50%;
     user-select: none;
     background-color: #8bad8b;
 }
 .next2{
-    right: 275px;
-    position: absolute; 
-    border-radius: 50%;
+    top: 0.1em;
+    left: 48%;
 }
 .prev2{
-    position: absolute; 
-    left: 280px;
+    top: 0.1em;
+    left:38%;
 }
 .prev2:hover, .next2:hover{background-color: #627455;}
 
+
 .captiontext{
     color: #627455;
-    font-size: 20px;
+    font-size: min(2vw, 20px);
     position: relative;
     max-width: 100%;
     bottom: 1.6em;
@@ -448,15 +454,15 @@ th{
 }
 .captiontext2{
     color: #627455;
-    font-size: 20px;
-    padding: 10px 14px; 
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    left: 3px;
-    top:390px;
+    font-size: min(2vw, 20px);
+    position: relative;
+    max-width: 100%;
+    top:1.3em;
+    text-align: left;
+    left:48%;
     font-family: "Lexend Deca", sans-serif;
 }
+
 
 .dot{
     cursor: pointer;
@@ -480,7 +486,6 @@ th{
     to {opacity: 1}
 }
 
-.mySlides{display: none;}
 
 .dot{
     cursor: pointer;

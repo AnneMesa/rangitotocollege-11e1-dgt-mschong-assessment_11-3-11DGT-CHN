@@ -198,6 +198,79 @@ function changefourteenth(){
         image_tracker14 ="prebiotics";
     }
 }
+var image_tracker15 = 'pathogen';
+function changefifteenth(){
+    var image = document.getElementById('square15');
+    if (image_tracker15 == "pathogen" ){
+        image.src="Images/f3definition1.png";
+        image_tracker15 ="pathogendefinition";
+    }
+    else{
+        image.src="Images/f3term1.png";
+        image_tracker15 ="pathogen";
+    }
+}
+var image_tracker16 = 'antibiotics';
+function changesixteenth(){
+    var image = document.getElementById('square16');
+    if (image_tracker16 == "antibiotics" ){
+        image.src="Images/f3definition2.png";
+        image_tracker16 ="antibioticsdefinition";
+    }
+    else{
+        image.src="Images/f3term2.png";
+        image_tracker16 ="antibiotics";
+    }
+}
+var image_tracker17 = 'vaccinations';
+function changeseventeenth(){
+    var image = document.getElementById('square17');
+    if (image_tracker17 == "vaccinations" ){
+        image.src="Images/f3definition3.png";
+        image_tracker17 ="vaccinationsdefinition";
+    }
+    else{
+        image.src="Images/f3term3.png";
+        image_tracker17 ="vaccinations";
+    }
+}
+var image_tracker18 = 'passiveimmunity';
+function changeeighteenth(){
+    var image = document.getElementById('square18');
+    if (image_tracker18 == "passiveimmunity" ){
+        image.src="Images/f3definition4.png";
+        image_tracker18 ="passiveimmunitydefinition";
+    }
+    else{
+        image.src="Images/f3term4.png";
+        image_tracker18 ="passiveimmunity";
+    }
+}
+
+var image_tracker19 = 'activeimmunity';
+function changenineteenth(){
+    var image = document.getElementById('square19');
+    if (image_tracker19 == "activeimmunity" ){
+        image.src="Images/f3definition5.png";
+        image_tracker19 ="activeimmunitydefinition";
+    }
+    else{
+        image.src="Images/f3term5.png";
+        image_tracker19 ="activeimmunity";
+    }
+}
+var image_tracker20 = 'antibodies';
+function changetwentieth(){
+    var image = document.getElementById('square20');
+    if (image_tracker20 == "antibodies" ){
+        image.src="Images/f3definition6.png";
+        image_tracker20 ="antibodiesdefinition";
+    }
+    else{
+        image.src="Images/f3term6.png";
+        image_tracker20 ="antibodies";
+    }
+}
 
 let slideIndex = 1;
 showSlides(slideIndex);

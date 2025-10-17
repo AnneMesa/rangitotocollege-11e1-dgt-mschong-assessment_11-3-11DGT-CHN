@@ -105,53 +105,55 @@ body{/*Initial css style across all pages*/
 .grid-container{/*This is the grid layout that positions the flashcard, slideshow, and quiz introduction*/
     display: grid;/*Automatically creates rows and columns*/
     grid-template-areas:/*The automatic amount of columns is 6, so these areas are defined accoridingly to how much columns one grid area will take*/
-    'first first first firstimg firstimg firstimg'/*L*/
-    'secondimg secondimg secondimg second second second'
-    'third third third thirdimg thirdimg thirdimg';
+    'first first first firstimg firstimg firstimg'/*This states that the learning text will take up the first 3 columns and the learning image will take up the next 3 columns*/
+    'secondimg secondimg secondimg second second second' /*This states that the flashcard image will take up the first 3 columns and the flashcard text will take up the next 3 columns*/
+    'third third third thirdimg thirdimg thirdimg';/*This states that the quiz text will take up the first 3 columbs and the quiz image will take up the next 3 columns*/
     padding: 10px;
 }
 .grid-container > div{padding: 10px;}
 
-.learning{
-    grid-area: first; 
+.learning{/*The div that wraps around the learning introduction text*/
+    grid-area: first;/*css states its grid area*/
     color: #627455;
     font-family: "Lexend Deca", sans-serif;
     margin-left: 4.5em;
 }
-.coverlearn{grid-area: firstimg;}
 
-.lheading, .qheading{
+.lheading, .qheading{/*The css for the learning and quiz heading*/
     margin-top: 1.5em;
     font-size: 2.7em;
 }
-.lsheading, .qsheading{
+.lsheading, .qsheading{/*The css for the learning and quiz subheading*/
     margin-top: 1em;
     font-size: 1.2em;
 }
-.fheading{
-    font-size: 2.7em;
-    margin-top: 1.5em;
-    margin-right: 4em;
-}
-.fsheading{
-    font-size: 1.2em;
-    margin-top: 1em;
-    margin-right: 4em;
-}
+
+.coverlearn{grid-area: firstimg;}/*The div that wraps around the learning image*/
+
 .coverlearn img{
-    max-width: 100%;
+    max-width: 100%;/*Max width allows it to be responsive to different screen sizes, so it shrinks when the screen shrinks*/
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-.flashcard{
+.flashcard{/*The div that wraps around the flashcard introduction text*/
     grid-area: second; 
     color: #627455;
     font-family: "Lexend Deca", sans-serif;
     background-color: #e6f0dc;
 }
-.coverflash{
+.fheading{/*The css for the flashcard heading*/
+    font-size: 2.7em;
+    margin-top: 1.5em;
+    margin-right: 4em;
+}
+.fsheading{/*The css for the flashcard subheading*/
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-right: 4em;
+}
+.coverflash{/*The div that wraps around the flashcard image*/
     grid-area: secondimg;
     background-color: #e6f0dc;
 }
@@ -162,13 +164,14 @@ body{/*Initial css style across all pages*/
     margin-left: auto;
     margin-right: auto;
 }
-.quiz{
+.quiz{/*The div that wraps around the quiz introduction text*/
     grid-area: third; 
     color: #627455;
     font-family: "Lexend Deca", sans-serif;
     margin-left: 4.5em;
 }
-.coverquiz{grid-area: thirdimg;}
+.coverquiz{grid-area: thirdimg;}/*The div that wraps around the quiz iamge*/
+
 .coverquiz img{
     max-width: 100%;
     height: auto;
@@ -176,28 +179,28 @@ body{/*Initial css style across all pages*/
     margin-left: auto;
     margin-right: auto;
 }
-/*This is the initial collapsible for the flashcards and quizzes only*/
+/*This is the initial collapsible for the slideshow and quizzes only*/
 .collapsible{
     background-color: #e6f0dc;
     color:#627455;
-    cursor:pointer;
+    cursor:pointer;/*Makes it so that when the user hovers over it the pointer mouse appears (they know to click it)*/
     border:1px #e6f0dc solid;
-    border-radius: 0.8em;
-    outline: none;
+    border-radius: 0.8em;/*This border-radius gives it its curved shape*/
+    outline: none;/*This removes the automatic outline around its button*/
     font-size: 1em;
     padding: 0.8em;
     font-family: "Lexend Deca", sans-serif;
-    position: absolute; 
+    position: absolute;/*Ensures it won't move with the dropdown*/
     width: 18%;
     margin-top: 2.2em;
 }
-/*This is the collapsible for flashcards and slides when hovered over*/
+/*This is the collapsible for quizzes and slides when hovered over*/
 .collapsible:hover{
     background-color:#8bad8b;
 }
-/*This is the activated collapsible when clicked on for flashcards or quizzes*/
+/*This is the activated collapsible when clicked on for slideshows or quizzes*/
 .active{
-    border-radius: 0.8em 0.8em 0 0;
+    border-radius: 0.8em 0.8em 0 0;/*Makes it so that only the top corners will be rounded when the dropdown occurs*/
     background-color: #e6f0dc;
     color:#627455;
     cursor:pointer;
@@ -210,9 +213,8 @@ body{/*Initial css style across all pages*/
     margin-top: 2.2em;
 
 }
-/*This is the dropdown collapsible when activated for flashcards or quizzes*/
-.content{
-    display: none;
+.content{/*This is the dropdown collapsible when activated for slideshows or quizzes*/
+    display: none;/*ensures that the display won't show unless clicked upon*/
     overflow:hidden;
     background-color:#d5e3c8;
     position: absolute;
@@ -221,8 +223,9 @@ body{/*Initial css style across all pages*/
     width: 18%;
     margin-top:5em;
 }
+/*This is the intial collapsible for the flashcard section only, as it has a contrasting colour to the other introductions to provide depth to the user*/
 .collapsible2{
-    background-color: white;
+    background-color: white;/*Different colour than the #e6f0dc that the other introduction had*/
     color:#627455;
     cursor:pointer;
     border:1px white solid;
@@ -235,12 +238,10 @@ body{/*Initial css style across all pages*/
     position: absolute; 
     font-family: "Lexend Deca", sans-serif;
 }
-/*This is the collapsible for flashcards and slides when hovered over*/
-.collapsible2:hover{
+.collapsible2:hover{/*This is the colour when the collapsible is hovered over*/
     background-color:#8bad8b;
 }
-/*This is the activated collapsible when clicked on for flashcards or quizzes*/
-.active2{
+.active2{/*This is the activated collapsible when clicked on for flashcards*/
     border-radius: 0.8em 0.8em 0 0;
     background-color: #e6f0dc;
     color:#627455;
@@ -252,8 +253,7 @@ body{/*Initial css style across all pages*/
     margin-top: 1em;
     width: 20%;
 }
-/*This is the dropdown collapsible when activated for flashcards or quizzes*/
-.content2{
+.content2{/*This is the dropdown collapsible when activated for slideshows or quizzes*/
     display: none;
     overflow:hidden;
     background-color:#d5e3c8;
@@ -263,7 +263,7 @@ body{/*Initial css style across all pages*/
     margin-top: 5em;
     border-radius: 0 0 0.8em 0.8em;
 }
-.topics{
+.topics{/*This is the css for the text inside the content for the slideshow and quiz collapsibles*/
     font-family: "Lexend Deca", sans-serif;
     overflow: hidden;
     position: relative;
@@ -273,7 +273,7 @@ body{/*Initial css style across all pages*/
     text-decoration: none;
     color: #627455;
 }
-.topics2{
+.topics2{/*This is the css for the text inside the content for the flashcard collapsible*/
     font-family: "Lexend Deca", sans-serif;
     overflow: hidden;
     position: relative;
@@ -282,18 +282,20 @@ body{/*Initial css style across all pages*/
     padding: 12px 16px;
     text-decoration: none;
     color: #627455;
+}/*This is the end for the collapsible css for the flashcard, slideshow, and quiz introduction*/
+/*This is the end of index.html homepage*/
+/*This is the start of learning1.html, learning2.html, and learning3.html*/
+.learningintro{/*This div wraps around the dark green banner at the beginning of the learning pages*/
+    background-color: #8bad8b;
+    padding: 5em;/*Padding gives it the spacing it needs to be a large banner*/
 }
-
-.subcards{
+.learningintro h1{/*This is the main heading inside the dark green banner*/
+    color: white;
+    text-align: center;
     font-family: "Lexend Deca", sans-serif;
-    color: #627455;
-    font-weight: normal; 
-    font-size: 16px;
-    margin-left: 50px;
-    margin-top:40px;
+    font-size: 5em;
 }
-
-.headersub{
+.headersub{/*This is the small subheader after the dark green banner which is introduces the title of the topic that the learning page is about*/
     font-size: 2.2em;
     text-align: center;
     color: #627455;
@@ -301,82 +303,7 @@ body{/*Initial css style across all pages*/
     padding-top: 1em;
     font-family: "Lexend Deca", sans-serif;
 }
-*{box-sizing:border-box}
-
-
-*{
-    margin: 0;
-    box-sizing: border-box;
-}
-.flashcard-container{
-    margin-top:-3em;
-}
-.cardgrid-container{
-    margin-top: 2em;
-    display: grid;
-    grid-template-areas:
-    'listterms listterms listterms slideshow-container slideshow-container slideshow-container';
-    padding: 0.5em;
-    gap: 1em;
-}
-.cardgrid-container > div{
-    padding: 10px;
-}
-.listterms h1{
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 2em;
-    color: #627455;
-}
-.listterms h2{
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 1em;
-    color: #627455;
-    font-weight: normal;
-}
-table{
-    border-collapse: separate;
-    width: 120%;
-    border: 1px solid #627455; 
-    border-radius: 20px;
-    overflow:hidden; 
-
-}
-th, td{padding: 0.8em;}
-th{
-    font-family: "Lexend Deca", sans-serif;
-    color: #627455;
-    font-size: 1.1em;
-    font-weight: normal; 
-    text-align: left; 
-}
-.tablewrap{margin-left: 6em;}
-
-.slideshow-container{grid-area: slideshow-container;}
-
-.listterms{grid-area: listterms;}
-
-.slideshow-container img{
-    margin-top: -1.5em;
-    margin-left: -2em;
-}
-
-.slideshow-container{
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-
-}
-.learningintro{
-    background-color: #8bad8b;
-    padding: 5em;
-}
-.learningintro h1{
-    color: white;
-    text-align: center;
-    font-family: "Lexend Deca", sans-serif;
-    font-size: 5em;
-}
-.learningsub{
+.learningsub{/*This is the text for the small subheader that explains what the slideshow will be teaching you. */
     font-size: 1.15em;
     font-family: "Lexend Deca", sans-serif;
     text-align: center; 
@@ -384,8 +311,19 @@ th{
     margin-top: 1em;
 }
 
-.mySlides, .mySlides2{display: none;}
-.prev, .next{
+.slideshow-container{/*This is the div that wraps around the entire slideshow in learning1, learning2, and learning3*/
+    max-width: 1000px;/*makes the container responsive*/
+    position: relative;
+    margin: auto;
+}
+.mySlides{/*Positions the entire slideshow*/
+    margin-top:3em;
+}
+.slideshow-container img{/*Positions the slideshow image correctly on the page*/
+    margin-top: -1.5em;
+    margin-left: -2em;
+}
+.prev, .next{/*Div for both of the arrows in regards of responsiveness and font-size*/
     cursor: pointer;
     position: relative;
     max-width: 100%;
@@ -395,21 +333,81 @@ th{
     font-weight:bold;
     font-size: min(2vw, 20px);
 }
-.prev{
-    bottom: 2.9em;
-    left:15%;
+.prev{/*Css code positions the first arrow for learning1, learning2, and learning3*/
+    bottom: 2.9em;/*Bottom position used due to position: relative, em unit used for responsiveness*/
+    left:15%;/*Left position used due to position: relative, % used for responsiveness*/
     
 }
-.next{
+.next{/*Css code positions the second arrow for learning1, learning2, and learning3*/
     bottom: 2.9em;
     left: 20%;
 }
-
-
-.mySlides, .mySlides2{
-    margin-top:3em;
+.captiontext{/*The caption number text that controls its positioning and maximum size*/
+    color: #627455;
+    font-size: min(2vw, 20px);/*Minimum size ensures that the font-size shrinks to fit the webpage but doesn't go smaller than 20px, learned through ww3schools*/
+    position: relative;
+    max-width: 100%;
+    bottom: 1.6em;
+    text-align: left;
+    margin-left:9.5em;
+    font-family: "Lexend Deca", sans-serif;
 }
-.mySlides img, .mySlides2 img{
+/*This is the end of learning1.html, learning2.html, and learning3.html*/
+/*This is the start of flashcard1.html, flashcard2.html, and flashcard3.html*/
+.cardgrid-container{/*This div wraps around the entire flashcard content and creates the separate rows and columns using grid-template-areas*/
+    margin-top: 2em;
+    display: grid;
+    grid-template-areas:
+    'listterms listterms listterms slideshow-container slideshow-container slideshow-container';/*This states that the list of terms takes up 3 columns and the flashcards take up the next 3 columns*/
+    padding: 0.5em;
+    gap: 1em;
+}
+.cardgrid-container > div{
+    padding: 10px;
+}
+.tablewrap{margin-left: 6em;}/*The div that wraps around the entire list of terms, controls its positioning to the left*/
+
+.listterms{grid-area: listterms;}/*states that this div takes up the first 3 sections of the table*/
+.listterms h1{/*The css for the heading inside of the list of terms*/
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2em;
+    color: #627455;
+}/*The css for the subheading inside of the list of terms*/
+.listterms h2{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1em;
+    color: #627455;
+    font-weight: normal;
+}
+table{/*Structures the list of flashcard terms inside of the cardgrid-container like bulletpoints*/
+    border-collapse: separate;/*Removes the automatic border around the table, learned from ww3schools*/
+    width: 120%;
+    border: 1px solid #627455; 
+    border-radius: 20px;
+    overflow:hidden; 
+}
+th, td{padding: 0.8em;}/*Gives padding to each individual bulletpoint inside of the table*/
+th{/*Gives css to the lettering inside of the table*/
+    font-family: "Lexend Deca", sans-serif;
+    color: #627455;
+    font-size: 1.1em;
+    font-weight: normal; 
+    text-align: left; 
+}
+.slideshow-container{grid-area: slideshow-container;}/*This div wraps around the entire flashcard slideshow, also states that it takes up the next 3 columns of the grid*/
+
+.mySlides{display: none;}/*Hides slides by default until clicked upon*/
+
+*{
+    box-sizing:border-box;
+    margin:0;
+}
+
+.flashcard-container{/*the container for the flashcards that positions it at a higher spot*/
+    margin-top:-3em;
+}
+
+.mySlides img{/*The images for the flashcards that ensure it will move with the grid*/
     position: relative; 
     top: 5px;
     left:15px;
@@ -418,41 +416,29 @@ th{
     display: block; 
     margin: auto;
 }
-.prev2, .next2{
+.prev2, .next2{/*The arrows for the flashcards, has a background unlike the first arrows*/
     cursor: pointer;
     position: relative;
-    max-width: 100%;
-    padding:0.8em 1.1em 0.8em;
+    max-width: 100%;/*Ensures the arrows will be responsive, shrink when the screen shrinks*/
+    padding:0.8em 1.1em 0.8em;/*The padding around the arrows to give it a larger area*/
     color:white;
-    user-select: none; 
+    user-select: none;/*Makes sure that arrows won't be highlighted when the user clicks on it */ 
     font-weight:bold;
     font-size: min(2vw, 20px);
-    border-radius: 50%;
-    user-select: none;
+    border-radius: 50%;/*Makes the background a circlular shape*/
     background-color: #8bad8b;
 }
-.next2{
+.next2{/*Positions the second arrow*/
     top: 0.1em;
     left: 48%;
 }
-.prev2{
+.prev2{/*Positions the first arrow*/
     top: 0.1em;
     left:38%;
 }
 .prev2:hover, .next2:hover{background-color: #627455;}
 
-
-.captiontext{
-    color: #627455;
-    font-size: min(2vw, 20px);
-    position: relative;
-    max-width: 100%;
-    bottom: 1.6em;
-    text-align: left;
-    margin-left:9.5em;
-    font-family: "Lexend Deca", sans-serif;
-}
-.captiontext2{
+.captiontext2{/*The number text for the flashcards*/
     color: #627455;
     font-size: min(2vw, 20px);
     position: relative;
@@ -460,57 +446,23 @@ th{
     top:1.3em;
     text-align: left;
     left:48%;
+    overflow: hidden;
     font-family: "Lexend Deca", sans-serif;
 }
 
 
-.dot{
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: green;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover{background-color: #e6f0dc;}
-
-.fade{
+.fade{/*THe flashard and the slideshow fade when the user clicks on it*/
     animation-name: fade;
     animation-duration: 1.5s
 }
 @keyframes fade{
-    from{opacity: .4}
-    to {opacity: 1}
-}
-
-
-.dot{
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: green;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover{background-color: #e6f0dc;}
-
-.fade{
-    animation-name: fade;
-    animation-duration: 1.5s
-}
-@keyframes fade{
-    from{opacity: .4}
+    from{opacity: .4}/*Ensures the flashcard/slideshow image will fadt from a low opacity to a higher opacity*/
     to {opacity: 1}
 }
 .content-area{
     padding: 10% 0;
 }
+/*End of flashcard1.html, flashcard2.html, and flashcard3.html*/
 @media only screen and (max-width: 800px){
     .cardgrid-container{
         gap: 2em;

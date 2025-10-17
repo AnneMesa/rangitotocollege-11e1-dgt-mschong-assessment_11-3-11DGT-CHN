@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <!--This is a link to the arrow icons.-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!--The navbar across webpages-->
+  <div class = "navbar">
+    <a href="">
+    <img class = "logo" src="Images/logo.svg.svg" alt="logo"></a>
+
+    <a class = "current" href="index.html">Homepage</a>
+    <div class= "learningdropdown">
+      <button class="dropbtn">Learning&nbsp;
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class = "learningcontent">
+        <a href="learning1.html">Microbes</a>
+        <a href="learning2.html">Beneficial Microbes</a>
+        <a href="learning3.html">Harmful Microbes</a>
+      </div>
+    </div>
+    <div class= "learningdropdown">
+      <button class="dropbtn">Flashcards&nbsp;
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class = "learningcontent">
+        <a href="flashcards1.html">Microbes</a>
+        <a href="flashcards2.html">Beneficial Microbes</a>
+        <a href="flashcards3.html">Harmful Microbes</a>
+      </div>
+    </div>
+    <div class= "learningdropdown">
+      <button class="dropbtn">Quizzes&nbsp;
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class = "learningcontent">
+        <a href="">Easy</a>
+        <a href="">Medium</a>
+        <a href="">Hard</a>
+      </div>
+    </div>
+  </div>
+  <div class ="learningintro">
+    <h1 class="learningheading">
+        MICROBES
+    </h1>
+    <p></p>
+  </div>
+<!--I created a grid for my flashcards and my list of terms so that they're able to be centered automatically-->
+  <div class="cardgrid-container">
+    <div class="tablewrap">
+      <!--This tablewrap controls the positioning of the table within the grid, it also is involved in making the table responsive with media queries when the screen size changes-->
+      <div class="listterms">
+      <!--Short header for the flashcards-->
+      <h2> Biology/ NCEA / Level 1</h2><!--This is the subtitle that introduces the subject of the flashcards-->
+      <h1> HARMFUL </h1><!--This is the topic of the flashcards-->
+      <!--End of the short header for the flashcards-->
+      <br>
+      <table><!--Table on the left that displays the list of terms-->
+        <tr><th>Pathogen</th></tr>
+        <tr><th>Antibiotics</th></tr>
+        <tr><th>Vaccinations</th></tr>
+        <tr><th>Passive Immunity</th></tr>
+        <tr><th>Active Immunity</th></tr>
+        <tr><th>Antibodies</th></tr>
+      </table><!--End of the table that displays the list of terms on the flashcards-->
+      </div>
+    </div>
+    <!--The container for the slideshow -->
+    <div class ="slideshow-container">
+    <div class="flashcard-container">
+      <div class="mySlides fade"><!--The onclick calls on the specific function of "changefirst" to change the 
+        displayed image into another image changing the link when a specific if/else statement is met-->
+        <img src="Images/f3term1.png" alt = "square15" id="square15" onclick="changefifteenth();">
+        <div class = "captiontext2">1 / 6</div><!--This text at the bottom conveys to the user which flashcard slide they're on-->
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/f3term2.png" alt = "square16" id="square16" onclick="changesixteenth();">
+        <div class = "captiontext2">2 / 6</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/f3term3.png" alt = "square17" id="square17" onclick="changeseventeenth();">
+        <div class = "captiontext2">3 / 6</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/f3term4.png" alt = "square18" id="square18" onclick="changeeighteenth();">
+        <div class = "captiontext2">4 / 6</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/f3term5.png" alt = "square19" id="square19" onclick="changenineteenth();">
+        <div class = "captiontext2">5 / 6</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/f3term6.png" alt = "square20" id="square20" onclick="changetwentieth();">
+        <div class = "captiontext2">6 / 6</div>
+      </div>
+      <a class = "prev2" onclick="plusSlides(-1)">&#10094;</a>
+      <a class = "next2" onclick="plusSlides(1)">&#10095;</a>
+    </div><!--End of container for slideshow-->
+  </div>
+  </div><!--End of cardgrid-container-->
+ 
+</body>
+</html>

@@ -89,9 +89,9 @@ body{/*Initial css style across all pages*/
     font-family: "Lexend Deca", sans-serif;
     text-align: center;
     color: #627455;
-    font-size:3em;
     padding-top: 110px;
-    font-weight:400px;
+    font-size: 3.8em;
+    font-weight:750;
 }
 
 .introsub{/*The short introductory paragraph text in the light green introduction banner*/
@@ -99,8 +99,10 @@ body{/*Initial css style across all pages*/
     text-align: center;
     font-size: 1.2em;
     color: #627455;
-    padding-top:5px;
+    padding-top:25px;
     padding-bottom:70px;
+    padding-left:160px;
+    padding-right:160px;
 }
 .grid-container{/*This is the grid layout that positions the flashcard, slideshow, and quiz introduction*/
     display: grid;/*Automatically creates rows and columns*/
@@ -117,18 +119,24 @@ body{/*Initial css style across all pages*/
     color: #627455;
     font-family: "Lexend Deca", sans-serif;
     margin-left: 4.5em;
+    margin-bottom:11em;
 }
 
 .lheading, .qheading{/*The css for the learning and quiz heading*/
-    margin-top: 1.5em;
-    font-size: 2.7em;
+    margin-top: 2em;
+    margin-bottom:0.5em;
+    font-size: 3.2em;
+    font-weight:750;
 }
 .lsheading, .qsheading{/*The css for the learning and quiz subheading*/
-    margin-top: 1em;
+    margin-top: 1.5em;
     font-size: 1.2em;
 }
 
-.coverlearn{grid-area: firstimg;}/*The div that wraps around the learning image*/
+.coverlearn{
+    grid-area: firstimg;
+    margin-top:4.8em;
+}/*The div that wraps around the learning image*/
 
 .coverlearn img{
     max-width: 100%;/*Max width allows it to be responsive to different screen sizes, so it shrinks when the screen shrinks*/
@@ -144,9 +152,10 @@ body{/*Initial css style across all pages*/
     background-color: #e6f0dc;
 }
 .fheading{/*The css for the flashcard heading*/
-    font-size: 2.7em;
     margin-top: 1.5em;
     margin-right: 4em;
+    font-size: 3.2em;
+    font-weight:750;
 }
 .fsheading{/*The css for the flashcard subheading*/
     font-size: 1.2em;
@@ -169,8 +178,12 @@ body{/*Initial css style across all pages*/
     color: #627455;
     font-family: "Lexend Deca", sans-serif;
     margin-left: 4.5em;
+    margin-bottom:11em;
 }
-.coverquiz{grid-area: thirdimg;}/*The div that wraps around the quiz iamge*/
+.coverquiz{
+    grid-area: thirdimg;
+    margin-top:4.8em;
+}/*The div that wraps around the quiz iamge*/
 
 .coverquiz img{
     max-width: 100%;
@@ -187,12 +200,13 @@ body{/*Initial css style across all pages*/
     border:1px #e6f0dc solid;
     border-radius: 0.8em;/*This border-radius gives it its curved shape*/
     outline: none;/*This removes the automatic outline around its button*/
-    font-size: 1em;
-    padding: 0.8em;
+    font-size: 1.1em;
+    font-weight:600;
+    padding: 1em;
     font-family: "Lexend Deca", sans-serif;
     position: absolute;/*Ensures it won't move with the dropdown*/
-    width: 18%;
-    margin-top: 2.2em;
+    width: 20%;
+    margin-top: 2.2em;  
 }
 /*This is the collapsible for quizzes and slides when hovered over*/
 .collapsible:hover{
@@ -204,24 +218,27 @@ body{/*Initial css style across all pages*/
     background-color: #e6f0dc;
     color:#627455;
     cursor:pointer;
-    padding:0.8em;
-    font-size: 1em;
+    padding:1em;
+    font-size: 1.1em;
     border:1px #e6f0dc solid;
     outline: none;
+    font-weight:600;
     font-family: "Lexend Deca", sans-serif;
-    width: 18%;
-    margin-top: 2.2em;
-
+    width: 20%;
+    margin-top: 2.2em;  
 }
 .content{/*This is the dropdown collapsible when activated for slideshows or quizzes*/
     display: none;/*ensures that the display won't show unless clicked upon*/
     overflow:hidden;
-    background-color:#d5e3c8;
+    background-color:#e6f0dc;
     position: absolute;
-    border: 1px #d5e3c8 solid;
+    border: 1px #e6f0dc solid;
     border-radius: 0 0 0.8em 0.8em;
-    width: 18%;
-    margin-top:5em;
+    width: 20%;
+    margin-top:5.8em;
+}
+.topics:hover{
+    background-color: #8bad8b;
 }
 /*This is the intial collapsible for the flashcard section only, as it has a contrasting colour to the other introductions to provide depth to the user*/
 .collapsible2{
@@ -231,9 +248,10 @@ body{/*Initial css style across all pages*/
     border:1px white solid;
     border-radius: 0.8em;
     outline: none;
-    font-size: 1em;
+    font-weight: 600;
+    font-size: 1.1em;
     width: 20%;
-    padding: 0.8em;
+    padding: 1em;
     margin-top: 2.2em; 
     position: absolute; 
     font-family: "Lexend Deca", sans-serif;
@@ -250,17 +268,17 @@ body{/*Initial css style across all pages*/
     border:1px #e6f0dc solid;
     outline: none;
     font-family: "Lexend Deca", sans-serif;
-    margin-top: 1em;
+    margin-top: 2.2em;
     width: 20%;
 }
 .content2{/*This is the dropdown collapsible when activated for slideshows or quizzes*/
     display: none;
     overflow:hidden;
-    background-color:#d5e3c8;
+    background-color:#e6f0dc;
     position: absolute;
-    border: 1px #d5e3c8 solid;
+    border: 1px #e6f0dc solid;
     width: 20%;
-    margin-top: 5em;
+    margin-top: 5.8em;
     border-radius: 0 0 0.8em 0.8em;
 }
 .topics{/*This is the css for the text inside the content for the slideshow and quiz collapsibles*/
@@ -472,17 +490,6 @@ th{/*Gives css to the lettering inside of the table*/
     }
 }
 @media only screen and (max-width: 700px){
-    .grid-container{
-        grid-template-areas:
-        'first'
-        'firstimg'
-        'second'
-        'secondimg'
-        'third'
-        'thirdimg';
-    }  
-
-    .learning, .flashcard, .quiz{margin: 0;}
 }
 @media only screen and (max-width: 800px){
     .cardgrid-container{
@@ -503,7 +510,85 @@ th{/*Gives css to the lettering inside of the table*/
         width: 45%;
     }
     .content, .content2{
+        position: static;
         width: 45%;
-        margin-top: 5em;
+        margin-top:-0.8em;
     }
+    .grid-container{
+        grid-template-areas:
+        'first'
+        'firstimg'
+        'second'
+        'secondimg'
+        'third'
+        'thirdimg';
+    }  
+    .introsub{
+        padding-left:0;
+        padding-right:0;
+    }
+}
+
+.app1, .app2, .app3, .app4{
+    background: white;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 100px auto 0;
+    border-radius: 2em;
+    padding: 30px;
+    display: block;
+    padding-bottom: -10em;
+}
+
+.quiz{
+    padding: 20px 0;
+    margin-right: 50px;
+}
+.quiz p{
+    font-size: 1.1em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #627455;
+}
+.answer{
+    color: #627455;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+.quiz h2{
+    font-size: 1.5em;
+    color: #627455;
+}
+.wrong, .right, .wrong2, .right2, .wrong3, .right3, .wrong4, .right4{
+    background: #e6f0dc;
+    border: 1px solid #e6f0dc;
+    border-radius: 5px;
+    color: #627455;
+    font-weight: 500;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    margin: 10px 0;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1em;
+}
+.wrong:hover:not([disabled]),.right:hover:not([disabled]),.wrong2:hover:not([disabled]),.right2:hover:not([disabled]),.wrong3:hover:not([disabled]),.right3:hover:not([disabled]),.wrong4:hover:not([disabled]),.right4:hover:not([disabled]){
+    background: #627455;
+    color: white;
+}
+
+.wrong:disabled, .right:disabled,.wrong2:disabled, .right2:disabled,.wrong3:disabled, .right3:disabled,.wrong4:disabled, .right4:disabled{
+    cursor: no-drop;
+}
+
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
 }

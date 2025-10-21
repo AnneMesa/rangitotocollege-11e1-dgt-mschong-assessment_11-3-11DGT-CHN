@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <meta charset="UTF-8">
     <title>My Webpage</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
@@ -12,10 +12,9 @@
   <body>
   <!--The navbar across webpages-->
   <div class = "navbar">
-    <a href="">
+    <a href="index.html">
     <img class = "logo" src="Images/logo.svg.svg" alt="logo"></a>
-
-    <a class = "current" href="">Homepage</a>
+    <a href="">Homepage</a>
     <div class= "learningdropdown">
       <button class="dropbtn">Learning&nbsp;
         <i class="fa fa-caret-down"></i>
@@ -41,20 +40,20 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class = "learningcontent">
-        <a href="">Easy</a>
-        <a href="">Medium</a>
-        <a href="">Hard</a>
+        <a href="quiz1.html">Easy</a>
+        <a href="quiz2.html">Medium</a>
+        <a href="quiz3.html">Hard</a>
       </div>
     </div>
   </div>
   <!--The div introduction that introduces what the entire website will be about-->
   <div class ="introduction">
     <h1 class ="intro">Here to cram for an exam?</h1>
-    <p class="introsub">With this study resource, you will be able to learn more about the NCEA Level 1 Biology as. <br> will support the end of curriculum at the end of year.  </p>
+    <p class="introsub">With this study resource, you will be able to learn more about the Y11 biology curriculum regarding microbes. Here, we provide learning slides, flashcards, and small practice quizzes.</p>
   </div> <!--End of the div introduction-->
   <div class="grid-container"><!--The div that wraps around the entire grid to assign specific sections with grid-template-areas-->
     <div class="learning"><!--The first section of the first introduction that introduces the learning slideshow section through text-->
-      <h1 class="lheading">Learn about biology now</h1>
+      <h1 class="lheading">Learn more about biology now</h1>
       <p class="lsheading">With our slides, you'll be able to learn more about the learning objectives that are needed for the exam. </p>
       <button type="button" class="collapsible">Click here to go on slides</button><!--The learning introduction collapsible that leads to the different learning slideshow sub-topics-->
       <div class="content">
@@ -64,25 +63,27 @@
       </div>
     </div><!--The end of the first text introduction-->
     <div class="coverlearn"><!--The second section of the first introduction that displays an image next to the text-->
-      <img class ="learnimg" src="Images/grey.jpg" alt ="learnimage">
+      <img class ="learnimg" src="Images/learningimg.png" alt ="learnimage" style="width:500px; height:300px;">
     </div>
     <div class="coverflash"><!--The first section of the second introduction that displays an image next to the text-->
       <img class ="flashimg" src="Images/grey.jpg" alt ="flashimg">
     </div>
     <div class="flashcard"><!--The second section of the second introduction that is the text which introduces the flashcards to the user-->
-      <h1 class="fheading">Recall key biology terms now</h1>
+      <h1 class="fheading">Recall biology terms today</h1>
       <p class="fsheading">With our flashcards you'll be able to memorise the biology vocabulary for your school exams</p>
-      <button type="button" class="collapsible2">Click here to go on flashcards</button><!--The flashcard introduction collapsible that allows the user to explore the different sub-topics of flashcards we have-->
+      <button type="button" class="collapsible2">Click here to go on cards</button><!--The flashcard introduction collapsible that allows the user to explore the different sub-topics of flashcards we have-->
       <div class="content2">
         <a class ="topics" href="flashcards1.html">Microbes </a>
         <a class ="topics" href="flashcards2.html">Beneficial Microbes</a>
         <a class ="topics" href="flashcards3.html">Harmful Microbes</a>
       </div>
+      <br>
+      <br>
     </div>
     <div class="quiz"><!--The first section of the third introduction that introduces the quiz section of the website-->
-      <h1 class="qheading">Test your knowledge today</h1>
-      <p class="qsheading">With our quizzes, you'll be able to test the learning objectives that you have learnt across the curriculum.</p>
-      <button type="button" class="collapsible">Click here to go on quizzes</button><!--This quiz introduction collapsible that allows the user to explore the different levels of quizzes that we have-->
+      <h1 class="qheading">Test your skilled knowledge</h1>
+      <p class="qsheading">With our quizzes, you'll be able to test the learning objectives that you have learnt across your year 11 curriculum.</p>
+      <button type="button" class="collapsible">Click here to go on quiz </button><!--This quiz introduction collapsible that allows the user to explore the different levels of quizzes that we have-->
       <div class="content">
         <a class ="topics" href="quiz1.html">Easy </a>
         <a class ="topics" href="quiz2.html">Medium</a>
@@ -90,9 +91,8 @@
       </div>
     </div>
     <div class="coverquiz"><!--The second section of the third introduction that displays an image next to the text-->
-      <img class="quizimg" src="Images/grey.jpg" alt ="quizimage">
+      <img class="quizimg" src="Images/quizimage.png" alt ="quizimage" style="width:500px; height:300px;">
     </div>
-  </div>
   </div>
 </body>
 </html>

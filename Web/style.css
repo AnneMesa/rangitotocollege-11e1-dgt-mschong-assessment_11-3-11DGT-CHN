@@ -11,7 +11,7 @@ body{/*Initial css style across all pages*/
     margin-top:8px;/*Controls the positioning of the text inside the navbar*/
     margin-left:8px;
     float: left;
-    font-size: 1em;
+    font-size: clamp(0.8em, 1.25vw, 1.2em);
     color: #627455;
     padding: 14px 16px;/*Controls the spacing of the text inside the navbar*/
     text-decoration: none;/*Removes the underline for each link*/
@@ -19,13 +19,7 @@ body{/*Initial css style across all pages*/
     font-family:"Lexend Deca", sans-serif;
 }
 
-.current{/*Div that indicates which page the user is on via underline*/
-    border-bottom: 4px solid #8bad8b;/*Underlined border at the bottom of the text*/
-    border-radius: 4px;
-    left:5px;
-}
-
-.current:hover{color:#8bad8b;}/*Hovers over the underlined text*/
+.homepage:hover{color:#8bad8b;}/*Hovers over the underlined text*/
 
 .learningdropdown {
     float:left;/*Ensures the navbar is spread across the entire page*/
@@ -37,7 +31,7 @@ body{/*Initial css style across all pages*/
 }
 .learningdropdown .dropbtn{
     position: relative;/*This position gives the ability to adjust the button's position*/
-    font-size: 1em;
+    font-size: clamp(0.8em, 1.25vw, 1.2em);
     border: none;/*This removes the automatic border around the button*/
     outline: none;
     color: #627455;
@@ -110,16 +104,14 @@ body{/*Initial css style across all pages*/
     'first first first firstimg firstimg firstimg'/*This states that the learning text will take up the first 3 columns and the learning image will take up the next 3 columns*/
     'secondimg secondimg secondimg second second second' /*This states that the flashcard image will take up the first 3 columns and the flashcard text will take up the next 3 columns*/
     'third third third thirdimg thirdimg thirdimg';/*This states that the quiz text will take up the first 3 columbs and the quiz image will take up the next 3 columns*/
-    padding: 10px;
 }
-.grid-container > div{padding: 10px;}
+.grid-container > div{ padding-bottom: 7em;}
 
 .learning{/*The div that wraps around the learning introduction text*/
     grid-area: first;/*css states its grid area*/
     color: #627455;
     font-family: "Lexend Deca", sans-serif;
     margin-left: 4.5em;
-    margin-bottom:11em;
 }
 
 .lheading, .qheading{/*The css for the learning and quiz heading*/
@@ -169,6 +161,7 @@ body{/*Initial css style across all pages*/
 .coverflash img{
     max-width: 100%;
     height: auto;
+    margin-top:4.8em;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -178,7 +171,6 @@ body{/*Initial css style across all pages*/
     color: #627455;
     font-family: "Lexend Deca", sans-serif;
     margin-left: 4.5em;
-    margin-bottom:11em;
 }
 .coverquiz{
     grid-area: thirdimg;
@@ -261,10 +253,10 @@ body{/*Initial css style across all pages*/
 }
 .active2{/*This is the activated collapsible when clicked on for flashcards*/
     border-radius: 0.8em 0.8em 0 0;
-    background-color: #e6f0dc;
+    background-color: white;
     color:#627455;
     cursor:pointer;
-    padding:0.8em;
+    padding:1em;
     border:1px #e6f0dc solid;
     outline: none;
     font-family: "Lexend Deca", sans-serif;
@@ -274,14 +266,14 @@ body{/*Initial css style across all pages*/
 .content2{/*This is the dropdown collapsible when activated for slideshows or quizzes*/
     display: none;
     overflow:hidden;
-    background-color:#e6f0dc;
+    background-color:white;
     position: absolute;
     border: 1px #e6f0dc solid;
     width: 20%;
     margin-top: 5.8em;
     border-radius: 0 0 0.8em 0.8em;
 }
-.topics{/*This is the css for the text inside the content for the slideshow and quiz collapsibles*/
+.topics,.topics2{/*This is the css for the text inside the content for the slideshow, flashcard and quiz collapsibles*/
     font-family: "Lexend Deca", sans-serif;
     overflow: hidden;
     position: relative;
@@ -291,16 +283,8 @@ body{/*Initial css style across all pages*/
     text-decoration: none;
     color: #627455;
 }
-.topics2{/*This is the css for the text inside the content for the flashcard collapsible*/
-    font-family: "Lexend Deca", sans-serif;
-    overflow: hidden;
-    position: relative;
-    text-align: left;
-    display: block;
-    padding: 12px 16px;
-    text-decoration: none;
-    color: #627455;
-}/*This is the end for the collapsible css for the flashcard, slideshow, and quiz introduction*/
+
+/*This is the end for the collapsible css for the flashcard, slideshow, and quiz introduction*/
 /*This is the end of index.html homepage*/
 /*This is the start of learning1.html, learning2.html, and learning3.html*/
 .learningintro{/*This div wraps around the dark green banner at the beginning of the learning pages*/
@@ -327,6 +311,8 @@ body{/*Initial css style across all pages*/
     text-align: center; 
     color: #627455;
     margin-top: 1em;
+    padding-left: 85px;
+    padding-right: 85px;
 }
 
 .slideshow-container{/*This is the div that wraps around the entire slideshow in learning1, learning2, and learning3*/
@@ -367,7 +353,7 @@ body{/*Initial css style across all pages*/
     max-width: 100%;
     bottom: 1.6em;
     text-align: left;
-    margin-left:9.5em;
+    margin-left:9.9em;
     font-family: "Lexend Deca", sans-serif;
 }
 /*This is the end of learning1.html, learning2.html, and learning3.html*/
@@ -424,7 +410,14 @@ th{/*Gives css to the lettering inside of the table*/
 .flashcard-container{/*the container for the flashcards that positions it at a higher spot*/
     margin-top:-3em;
 }
-
+.reminder{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1em;
+    color: #627455;
+    text-align: left;
+    font-style: italic;
+    margin-left:0.3em;
+}
 .mySlides img{/*The images for the flashcards that ensure it will move with the grid*/
     position: relative; 
     top: 5px;
@@ -490,6 +483,7 @@ th{/*Gives css to the lettering inside of the table*/
     }
 }
 @media only screen and (max-width: 700px){
+
 }
 @media only screen and (max-width: 800px){
     .cardgrid-container{
@@ -523,6 +517,9 @@ th{/*Gives css to the lettering inside of the table*/
         'third'
         'thirdimg';
     }  
+    .grid-container > div{
+        padding-bottom: 0;
+    }
     .introsub{
         padding-left:0;
         padding-right:0;
@@ -585,7 +582,25 @@ th{/*Gives css to the lettering inside of the table*/
 .wrong:disabled, .right:disabled,.wrong2:disabled, .right2:disabled,.wrong3:disabled, .right3:disabled,.wrong4:disabled, .right4:disabled{
     cursor: no-drop;
 }
-
+.restart{
+    background: #627455;
+    color: white;
+    border: 1px solid #627455;
+    border-radius: 5px;
+    font-weight: 500;
+    font-family: "Lexend Deca", sans-serif;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1em;
+    padding: 15px;
+    margin-left: 21em;
+    margin-top: 2em;
+}
+.restart:hover{
+    background: white;
+    border: 1px solid white;
+    color: #627455;
+}
 .correct{
     background: #9aeabc;
 }

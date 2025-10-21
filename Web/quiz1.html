@@ -15,7 +15,7 @@
   <div class = "navbar">
     <a href="index.html">
     <img class = "logo" src="Images/logo.svg.svg" alt="logo"></a>
-    <a href="index.html">Homepage</a>
+    <a class="homepage"href="index.html">Homepage</a>
     <div class= "learningdropdown">
       <button class="dropbtn">Learning&nbsp;
         <i class="fa fa-caret-down"></i>
@@ -47,7 +47,9 @@
       </div>
     </div>
   </div>
-<div class="app1">
+<!--End of navbar-->
+
+<div class="app1"><!--App1 distinguishes the first question through its white block shape. -->
   <div class="quiz">
     <h2 id="question">Question One</h2>
     <p>What is an example of a living organism?</p>
@@ -99,18 +101,35 @@
     </div>
   </div>
 </div>
+<button class="restart"onClick="window.location.reload();">Want to try again?</button>
 </body>
 </html>
+<!--I created a separate style from the rest of the css page to affect only its body (as there was already body css code in the main css page)-->
 <style>
   body{
     background-color: #e6f0dc;
   }
 </style>
+<!--I created a separate script.js page mainly due to the alert, and the question js codes. -->
+<!--If I were to add the alert in the main js page, it would cause an alert on all pages, which-->
+<!--is not what its meant for. The questions also has many variables with how I had coded it,-->
+<!--and may create confusion or distraction if adding all of them on the same page.-->
 <script>
-
-const wrongbutton1 = document.querySelectorAll(".wrong")
-const correctbutton1 = document.querySelectorAll(".right")
-
+window.onload = function(){//Windows.onload = function means this function will happen once the page has been loaded or clicked on by the user.//
+  alert("Welcome to the easy level!")
+  alert("This mcq quiz is designed to only test the basics of microbes, beneficial microbes, and harmful microbes. The answers to each question will be revealed once you choose, so pick wisely.")
+  if(confirm("Are you ready to start the quiz?")){//I added this alert to introduce how this quiz will work and what it will be about//
+  }else{
+    alert("Quiz will not begin. Redirecting you back to homepage.")//I added this function just in case the click had been on accident//
+    window.location.href="index.html";
+  }
+}
+//To code the questions, I initially had to watch many tutorials to get the js code to reveal the correct/wrong answers when clicked upon.//
+//In the end, GreatStack with their quiz app video had helped me the most, where I was inspired by their method of converting the buttons//
+//background colour once clicked upon to reveal the correct/wrong answers//
+const wrongbutton1 = document.querySelectorAll(".wrong")//the variable for the 3 wrong answers in question 1//
+const correctbutton1 = document.querySelectorAll(".right")//the variable for the right answer in question1, the rest are the same//
+//querySelectorAll calls upon the class name of all the buttons with that name in the HTML//
 const wrongbutton2 = document.querySelectorAll(".wrong2")
 const correctbutton2 = document.querySelectorAll(".right2")
 
@@ -120,29 +139,30 @@ const correctbutton3 = document.querySelectorAll(".right3")
 const wrongbutton4 = document.querySelectorAll(".wrong4")
 const correctbutton4 = document.querySelectorAll(".right4")
 
-wrongbutton1.forEach(button => {
-  button.addEventListener("click", () =>{
-    button.classList.add("incorrect");
-    wrongbutton1.forEach(button =>{
-      button.disabled = true;
-    })
+wrongbutton1.forEach(button => {//.forEach specifically applies this to all the buttons with that class name of ".wrong"//
+  button.addEventListener("click", () =>{//.addEventListener creates an event to occur once the button is clicked upon//
+    button.classList.add("incorrect");//.classList represents applying the class "incorrect"(which if you see in the css is the red coloru) once the event occurs//
+    wrongbutton1.forEach(button =>{//I included this again to apply to all the buttons with this class name//
+      button.disabled = true;//This disables all the wrong answer buttons so they cannot do the question over once they click on it//
+    })//This next part is extremely important, as it immediately reveals the correct answer once they've clicked on the wrong answer//
     correctbutton1.forEach(button =>{
       button.classList.add("correct");
       button.disabled = true;
     });
   });
 });
-
-correctbutton1.forEach(button => {
+//This code affects if the user were to pick the correct answer instead of any of the 3 wrong answers.//
+correctbutton1.forEach(button => {//This applies to the correct button in question 1//
   button.addEventListener("click", () =>{
     button.classList.add("correct");
     button.disabled = true;
-    wrongbutton1.forEach(button =>{
+    wrongbutton1.forEach(button =>{//This disables the other 3 wrong answers so they cannot press on any button after theyve answered the correct answer//
       button.disabled = true;
     });
   });
 });
-
+//The next pieces of js code work in the same way, but they are for the other questions.//
+//This is the js code for question 2//
 wrongbutton2.forEach(button => {
   button.addEventListener("click", () =>{
     button.classList.add("incorrect");
@@ -165,6 +185,9 @@ correctbutton2.forEach(button => {
     });
   });
 });
+//This is the end of the js code for question 2//
+
+//This is the js code for question 3//
 wrongbutton3.forEach(button => {
   button.addEventListener("click", () =>{
     button.classList.add("incorrect");
@@ -187,7 +210,8 @@ correctbutton3.forEach(button => {
     });
   });
 });
-
+//This is the end of the js code for question 3//
+//This is the js code for question 4//
 wrongbutton4.forEach(button => {
   button.addEventListener("click", () =>{
     button.classList.add("incorrect");
@@ -210,5 +234,6 @@ correctbutton4.forEach(button => {
     });
   });
 });
+//This is the end of the js code for question 4//
 
 </script>

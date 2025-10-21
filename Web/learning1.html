@@ -15,7 +15,7 @@
   <div class = "navbar">
     <a href="index.html">
     <img class = "logo" src="Images/logo.svg.svg" alt="logo"></a>
-    <a href="index.html">Homepage</a>
+    <a class="homepage"href="index.html">Homepage</a>
     <div class= "learningdropdown">
       <button class="dropbtn">Learning&nbsp;
         <i class="fa fa-caret-down"></i>
@@ -58,42 +58,45 @@
     Introduction to Microbes
   </h2>
   <p class ="learningsub">
-    Here, you're able to learn the basics of microorganisms and their structure. The main microorganisms that we're going to be <br>focusing on are bacteria, fungi, and viruses. You will be able to learn how they carry out the seven life processes, which you can <br>utilise in your biology exam.
+    In this first topic, we introduce to you the basics of microorganisms. This will teach you the fundamental knowledge you need to go in-depth in the later topics, as here, you learn how three main microorganisms carry out the seven life processes. 
   </p>  <!--End of small introduction-->
-
-  <div class ="slideshow-container"><!--The container div that wraps around the entire slideshow-->
+<!--I actually recently learned how to code this slideshow via ww3schools. WW3schools was able to teach me to create separate divs-->
+<!--that display each image, and hide each image until the arrows are clicked via onclick through its slide index. The slide index-->
+<!--is the number that represents the image its assigned to. This is further described in detail in its css page and js page.-->
+<div class ="slideshow-container"><!--The container div that wraps around the entire slideshow-->
     <div class="mySlides fade"><!--This controls the fade of each slide when the arrow is clicked-->
         <img src ="Images/l1title.png" alt="l1title">
-        <div class = "captiontext">0 / 10</div><!--The number is 0 as this is the title page-->
+        <div class = "captiontext">1 / 7</div>
     </div>
-    <div class="mySlides fade">
+    <div class="mySlides fade"><!--mySlides fade controls its fade in css when the arrow is clicked on to go to the next slide-->
         <img src ="Images/l1slide1.png" alt="l1slide1">
-        <div class = "captiontext">1 / 10</div><!--Numbers will change as the user goes through each slide-->
+        <div class = "captiontext">2 / 7</div><!--Numbers will change as the user goes through each slide-->
     </div>
     <div class="mySlides fade">
         <img src ="Images/l1slide3.png" alt="l1slide3" >
-        <div class = "captiontext">3 / 10</div>
+        <div class = "captiontext">3 / 7</div>
     </div>
     <div class="mySlides fade">
         <img src ="Images/l1slide4.png" alt="l1slide4">
-        <div class = "captiontext">4 / 10</div>
+        <div class = "captiontext">4 / 7</div>
     </div>
     <div class="mySlides fade">
         <img src ="Images/l1slide5.png" alt="l1slide5">
-        <div class = "captiontext">5 / 10</div>
+        <div class = "captiontext">5 / 7</div>
     </div>
     <div class="mySlides fade">
         <img src ="Images/l1slide7.png" alt="l1slide7">
-        <div class = "captiontext">7 / 10</div>
+        <div class = "captiontext">6 / 7</div>
     </div>
     <div class="mySlides fade">
         <img src ="Images/l1slide9.png" alt="l1slide9">
-        <div class = "captiontext">9 / 10</div>
+        <div class = "captiontext">7 / 7</div>
     </div>
     <div class="arrows">
       <a class = "prev" onclick="plusSlides(-1)">&#10094;</a><!--This is the arrow that allows the user to go backwards to the last slide there is, coded via js onclick -->
       <a class = "next" onclick="plusSlides(1)">&#10095;</a><!--This is the arrow that allows the user to go forwards onto the next slide, coded via js onclick-->
     </div>
+<!--I learnt the "plusSlides(1) and (-1) in ww3schools, where -1 represents going backwards to the last slide index(image) and 1 represents foing forwards to the next slide index(image)"-->
   </div><!--This is the end of the slideshow container that wraps around the entire slideshow-->
   <br>
 </body>

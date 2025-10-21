@@ -15,7 +15,7 @@
   <div class = "navbar">
     <a href="index.html">
     <img class = "logo" src="Images/logo.svg.svg" alt="logo"></a>
-    <a href="index.html">Homepage</a>
+    <a class="homepage"href="index.html">Homepage</a>
     <div class= "learningdropdown">
       <button class="dropbtn">Learning&nbsp;
         <i class="fa fa-caret-down"></i>
@@ -89,16 +89,17 @@
 <div class="app4">
   <div class="quiz">
     <h2 id="question">Question Four </h2>
-    <p>What is one of the ways gut bacteria is able to help us?</p>
+    <p>How does the body protect us in the first line of defense?</p>
     <p class="answer">Select answer</p>
     <div id="answer-buttons">
-      <button class ="right4">Through digestion</button>
-      <button class ="wrong4">Through absorption</button>
-      <button class ="wrong4">Through respiration</button>
-      <button class ="wrong4">Through excretion</button>
+      <button class ="right4">Through skin, sweat, mucus, and tears</button>
+      <button class ="wrong4">Through blood, sweat, mucus, and ear wax</button>
+      <button class ="wrong4">Through skin, sweat, mucus, and phlegm</button>
+      <button class ="wrong4">Through headaches, nausea, vomit, and headache</button>
     </div>
   </div>
 </div>
+<button class="restart"onClick="window.location.reload();">Want to try again?</button>
 </body>
 </html>
 <style>
@@ -107,7 +108,15 @@
   }
 </style>
 <script>
-
+window.onload = function(){
+  alert("Welcome to the medium level!")
+  alert("This mcq quiz is designed ")
+  if(confirm("Are you ready to start the quiz?")){
+  }else{
+    alert("Quiz will not begin. Redirecting you back to homepage.")
+    window.location.href="index.html";
+  }
+}
 const wrongbutton1 = document.querySelectorAll(".wrong")
 const correctbutton1 = document.querySelectorAll(".right")
 

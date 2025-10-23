@@ -301,7 +301,6 @@ body{/*Initial css style across all pages*/
     font-size: 2.2em;
     text-align: center;
     color: #627455;
-    font-weight: 60px;
     padding-top: 1em;
     font-family: "Lexend Deca", sans-serif;
 }
@@ -485,7 +484,6 @@ th{/*Gives css to the lettering inside of the table*/
     border-radius: 2em;
     padding: 30px;
     display: block;
-    padding-bottom: -10em;
 }
 .quiz{
     padding: 20px 0;

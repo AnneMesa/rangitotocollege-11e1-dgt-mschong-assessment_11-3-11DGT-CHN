@@ -475,69 +475,8 @@ th{/*Gives css to the lettering inside of the table*/
     padding: 10% 0;
 }
 /*End of flashcard1.html, flashcard2.html, and flashcard3.html*/
-@media only screen and (max-width: 800px){
-    .cardgrid-container{
-        gap: 2em;
-    }
-    .slideshow-container img{
-        left:0;
-    }
-}
-@media only screen and (max-width: 700px){
-
-}
-@media only screen and (max-width: 800px){
-    .cardgrid-container{
-    grid-template-areas:
-        'listterms'
-        'slideshow-container';
-    } 
-    .footergrid{
-        margin:0px;
-    }
-    .tablewrap{overflow-x: auto;}
-
-    .tablewrap{margin-left: 0;}
-
-}
-@media only screen and (max-width: 1000px){
-    .learning, .flashcard, .quiz{margin: 0;}
-
-    .active, .active2, .collapsible, .collapsible2{
-        position: static;
-        width: 45%;
-    }
-    .content, .content2{
-        position: static;
-        width: 45%;
-        margin-top:-0.8em;
-    }
-    .grid-container{
-        grid-template-areas:
-        'first'
-        'firstimg'
-        'second'
-        'secondimg'
-        'third'
-        'thirdimg';
-    }  
-     .footergrid{
-        grid-template-areas:
-            'author'
-            'contactinfo'
-            'learningsources';
-        margin: 0px;
-    }
-    .grid-container > div{
-        padding-bottom: 0;
-    }
-    .introsub{
-        padding-left:0;
-        padding-right:0;
-    }
-}
-
-.app1, .app2, .app3, .app4{
+/*This is the start of quiz1.html, quiz2.html, and quiz3.html*/
+.app1, .app2, .app3, .app4{/*This codes the background for each question in each of my quiz pages*/
     background: white;
     width: 100%;
     max-width: 700px;
@@ -548,28 +487,27 @@ th{/*Gives css to the lettering inside of the table*/
     display: block;
     padding-bottom: -10em;
 }
-
 .quiz{
     padding: 20px 0;
     margin-right: 50px;
 }
-.quiz p{
+.quiz p{/*This is the normal text inside the quiz*/
     font-size: 1.1em;
     padding-top: 8px;
     padding-bottom: 8px;
     color: #627455;
 }
-.answer{
+.answer{/*This is the "Select answer" boldened text*/
     color: #627455;
     padding-top: 10px;
     padding-bottom: 8px;
     font-weight: 500;
 }
-.quiz h2{
+.quiz h2{/*This is the header "question" text that depicts which question they are on*/
     font-size: 1.5em;
     color: #627455;
 }
-.wrong, .right, .wrong2, .right2, .wrong3, .right3, .wrong4, .right4{
+.wrong, .right, .wrong2, .right2, .wrong3, .right3, .wrong4, .right4{/*This is the css for each button in the quiz*/
     background: #e6f0dc;
     border: 1px solid #e6f0dc;
     border-radius: 5px;
@@ -586,14 +524,14 @@ th{/*Gives css to the lettering inside of the table*/
     font-size: 1em;
 }
 .wrong:hover:not([disabled]),.right:hover:not([disabled]),.wrong2:hover:not([disabled]),.right2:hover:not([disabled]),.wrong3:hover:not([disabled]),.right3:hover:not([disabled]),.wrong4:hover:not([disabled]),.right4:hover:not([disabled]){
-    background: #627455;
+    background: #627455;/*This is the hover that operates when the button is not yet disabled once they click on it*/
     color: white;
 }
 
 .wrong:disabled, .right:disabled,.wrong2:disabled, .right2:disabled,.wrong3:disabled, .right3:disabled,.wrong4:disabled, .right4:disabled{
-    cursor: no-drop;
+    cursor: no-drop;/*This disables the users cursor once they click on the answer so it wont be a pointer*/
 }
-.restart{
+.restart{/*This is the css for the restart button that reloads the page once the user has finished and wants to try again*/
     background: #627455;
     color: white;
     border: 1px solid #627455;
@@ -607,20 +545,16 @@ th{/*Gives css to the lettering inside of the table*/
     margin-left: 21em;
     margin-top: 2em;
 }
-.restart:hover{
+.restart:hover{/*This is the hover for the restart button*/
     background: white;
     border: 1px solid white;
     color: #627455;
 }
-.correct{
-    background: #9aeabc;
-}
-.incorrect{
-    background: #ff9393;
-}
-.footer{
-    margin-bottom:-2em;
-}
+.correct{background: #9aeabc;}/*This is the css that is added from the js once the user clicks on it and reveals that its correct*/
+.incorrect{background: #ff9393;}/*This is the css that is added from the js once the user clicks on it and reveals that its wrong*/
+/*This is the end of the quiz CSS for quiz1.html, quiz2.html, and quiz3.html*/
+/*This is the start of the footer code that spans across all 10 pages*/
+.footer{margin-bottom:-2em;}
 .footergrid{
     display: grid;
     grid-template-areas: 
@@ -641,18 +575,57 @@ th{/*Gives css to the lettering inside of the table*/
     margin-top: 1em;
 }
 
-.author{
-    grid-area: author;
+.author{grid-area: author;}
+.contactinfo{grid-area: contactinfo;}
+.learningsources{grid-area: learningsources;}
+footer{background-color: #e6f0dc;}
+.footer2{background-color: white;}
+/*This is the end of the footer code that spans across all 10 pages*/
+/*This is the start of the @media code*/
+/*I actually learned this from ww3schools when I wanted to divide my grid into separate rows once the screen*/
+/*had shrunk, since text wrapping was not enough*/
+@media only screen and (max-width: 800px){/*This code applies when the screen is at 800px*/
+    .slideshow-container img{left:0;}/*This removes the left margin in the flashcard slideshow and the learning slideshow*/
+    .cardgrid-container{
+        grid-template-areas:/*This separates the grid in the flashcard section to different rows*/
+            'listterms'
+            'slideshow-container';
+        gap: 2em;/*This adjusts the gap in the cardgrid-container*/
+    } 
+    .tablewrap{overflow-x: auto;}/*This allows for the table to have a scroll ability*/
+    .tablewrap{margin-left: 0;}/*This removes the margin-left in the tablewrap*/
 }
-.contactinfo{
-    grid-area: contactinfo;
+@media only screen and (max-width: 1000px){/*This code applies when the screen is at 1000px*/
+    .learning, .flashcard, .quiz{margin: 0;}/*This removes the margin of the learning, flashcard, and quiz introduction section*/
+    .active, .active2, .collapsible, .collapsible2{/*This adjusts the position of the collapsibles so it wont remain absolute on the page*/
+        position: static;
+        width: 45%;
+    }
+    .content, .content2{
+        position: static;
+        width: 45%;
+        margin-top:-0.8em;
+    }
+    .grid-container{/*This separates the grid into different rows so they are not crowding each other*/
+        grid-template-areas:
+        'first'
+        'firstimg'
+        'second'
+        'secondimg'
+        'third'
+        'thirdimg';
+    }  
+     .footergrid{/*This separates the footer grid into different rows*/
+        grid-template-areas:
+            'author'
+            'contactinfo'
+            'learningsources';
+        margin: 0px;
+    }
+    .grid-container > div{padding-bottom: 0;}
+    .introsub{/*This removes the padding in the introsub section*/
+        padding-left:0;
+        padding-right:0;
+    }
 }
-.learningsources{
-    grid-area: learningsources;
-}
-footer{
-    background-color: #e6f0dc;
-}
-.footer2{
-    background-color: white;
-}
+/*This is the end of the @media code*/

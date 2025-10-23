@@ -412,7 +412,7 @@ th{/*Gives css to the lettering inside of the table*/
 }
 .reminder{
     font-family: "Lexend Deca", sans-serif;
-    font-size: 1em;
+    font-size: 1.1em;
     color: #627455;
     text-align: left;
     font-style: italic;
@@ -454,6 +454,7 @@ th{/*Gives css to the lettering inside of the table*/
     font-size: min(2vw, 20px);
     position: relative;
     max-width: 100%;
+    width: 20%;
     top:1.3em;
     text-align: left;
     left:48%;
@@ -491,6 +492,9 @@ th{/*Gives css to the lettering inside of the table*/
         'listterms'
         'slideshow-container';
     } 
+    .footergrid{
+        margin:0px;
+    }
     .tablewrap{overflow-x: auto;}
 
     .tablewrap{margin-left: 0;}
@@ -517,6 +521,13 @@ th{/*Gives css to the lettering inside of the table*/
         'third'
         'thirdimg';
     }  
+     .footergrid{
+        grid-template-areas:
+            'author'
+            'contactinfo'
+            'learningsources';
+        margin: 0px;
+    }
     .grid-container > div{
         padding-bottom: 0;
     }
@@ -606,4 +617,42 @@ th{/*Gives css to the lettering inside of the table*/
 }
 .incorrect{
     background: #ff9393;
+}
+.footer{
+    margin-bottom:-2em;
+}
+.footergrid{
+    display: grid;
+    grid-template-areas: 
+    'author author contactinfo contactinfo learningsources learningsources learningsources';
+    margin-top:2em;
+}
+.footergrid > div{
+    padding: 30px;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1em;
+    color: #627455;
+}
+
+.footerheader, .footerheader2{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.1em;
+    color: #627455;
+    margin-top: 1em;
+}
+
+.author{
+    grid-area: author;
+}
+.contactinfo{
+    grid-area: contactinfo;
+}
+.learningsources{
+    grid-area: learningsources;
+}
+footer{
+    background-color: #e6f0dc;
+}
+.footer2{
+    background-color: white;
 }

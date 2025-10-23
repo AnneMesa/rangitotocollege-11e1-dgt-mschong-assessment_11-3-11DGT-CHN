@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
+<title>Y11 Biology Study | Annalyse</title>
 <style>
 *{
     box-sizing: border-box;
@@ -64,75 +65,77 @@
     opacity: 1;
 }
 </style>
-
-<div class="container">
-    <div class="mySlides">
-        <div class="numbertext">1 / 5</div>
-        <img src="Images/iterationl1s1.png" style="width:100%;">
+<!--This is the HTML for the large current slide that will be on the slideshow-->
+<div class="container"><!--This container wraps around the entire slideshow code-->
+    <div class="mySlides"><!--These mySlides are connected to my js code and hold the div image for each slide in the slideshow code-->
+        <div class="numbertext">1 / 5</div><!--This numbertext depicts to the user which slide that they are on currently-->
+        <img src="Images/iterationl1s1.png" alt="slide1" style="width:100%;"><!--This ensures the iamge/slide remains responsive to different screen sizes-->
     </div>
     <div class="mySlides">
         <div class="numbertext">2 / 5</div>
-        <img src="Images/iterationl1s2.png" style="width:100%">
+        <img src="Images/iterationl1s2.png" alt="slide2" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext">3 / 5</div>
-        <img src="Images/iterationl1s2 (2).png" style="width:100%">
+        <img src="Images/iterationl1s2(2).png" alt="slide3" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext">4 / 5</div>
-        <img src="Images/iterationl1s3.png" style="width:100%">
+        <img src="Images/iterationl1s3.png" alt="slide4" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext">5 / 5</div>
-        <img src="Images/iterationl1s4.png" style="width:100%">
+        <img src="Images/iterationl1s4.png" alt="slide5" style="width:100%">
     </div>
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    <div class="row">
-
-        <div class="column">
-            <img class="demo cursor" src="Images/iterationl1s1.png" style="width:100%; height:90px;" onclick="currentSlide(1)">
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a><!--This is the back arrow button-->
+    <a class="next" onclick="plusSlides(1)">&#10095;</a><!--This is the next arrow button-->
+<!--This is the end of the HTML -->
+<!--This is the start of the smaller images that go below the current image/slide-->
+    <div class="row"><!--This establishes a grid layout for the smaller images so they are divided equally based on its number of slides-->
+        <div class="column"><!--Due to the fact that this has a total of 5 slides, it will be divided onto 100/5 = 20% width columns-->
+            <img class="demo cursor" alt="smallerslide1" src="Images/iterationl1s1.png" style="width:100%; height:90px;" onclick="currentSlide(1)"><!--Onclick current slide ensures that it shows to the user that the function shows -->                                                                                                                      <!--that the image is the current one being shown on the large slide.-->
         </div>
         <div class="column">
-            <img class="demo cursor" src="Images/iterationl1s2.png" style="width:100%; height:90px;" onclick="currentSlide(2)">
+            <img class="demo cursor" alt="smallerslide2"src="Images/iterationl1s2.png" style="width:100%; height:90px;" onclick="currentSlide(2)">
         </div>
         <div class="column">
-            <img class="demo cursor" src="Images/iterationl1s2 (2).png" style="width:100%; height:90px;" onclick="currentSlide(3)">
+            <img class="demo cursor" alt="smallerslide3"src="Images/iterationl1s2(2).png" style="width:100%; height:90px;" onclick="currentSlide(3)">
         </div>
         <div class="column">
-            <img class="demo cursor" src="Images/iterationl1s3.png" style="width:100%; height:90px;" onclick="currentSlide(4)">
+            <img class="demo cursor" alt="smallerslide4"src="Images/iterationl1s3.png" style="width:100%; height:90px;" onclick="currentSlide(4)">
         </div>
         <div class="column">
-            <img class="demo cursor" src="Images/iterationl1s4.png" style="width:100%; height:90px;" onclick="currentSlide(5)">
+            <img class="demo cursor" alt="smallerslide5"src="Images/iterationl1s4.png" style="width:100%; height:90px;" onclick="currentSlide(5)">
         </div>
     </div>
 </div>
+<!--This is the end of the smaller images that go below the current image/slide-->
 <script>
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 1;//This establishes that the first slide/image shown will be 1
+showSlides(slideIndex);//showSlides is an established function that directly displays the first slide as every slide is currently hidden because of display: none
 
-function plusSlides(n){
+function plusSlides(n){//function plusSlides states that it will increase/decrease the slide that is currently shown when an arrow button is pressed
     showSlides(slideIndex += n);
 }
-function currentSlide(n){
+function currentSlide(n){//function currentSlides shows the current slide that will be displayed on the big slide based on its slideIndex
     showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("demo");
-    if (n > slides.length) {slideIndex = 1}
+    let i;//this establishes the i varaible
+    let slides = document.getElementsByClassName("mySlides");//This gets the class name in the HTML mySlides and establishes it as slides in JS
+    let images = document.getElementsByClassName("demo");//This gets the class name in the HTML demo and establishes it as images in js 
+    if (n > slides.length) {slideIndex = 1}//This states that if n is more than slides.length than the slideIndex will = 1 to current slide
     if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++){
+    for (i = 0; i < slides.length; i++){//this is a for loop/boundary case that states that if i is less than the slides.length than the slides displayed will not be shown
         slides[i].style.display = "none";
     }
-     for (i = 0; i < dots.length; i++){
-        dots[i].className = dots[i].className.replace("active","");
+     for (i = 0; i < images.length; i++){//This is for the smaller images js code, where its a for loop that states if i is less than images.length than the iamges will be replaced with .active
+        images[i].className = images[i].className.replace("active","");
     }
     slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    images[slideIndex-1].className += " active";
 }
 </script>
 </body>
